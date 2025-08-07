@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@custom-variant hover (&:hover);
+
+/* Base Colors */
+/* :root {
+  --background: #f9fafb;
+  --foreground: #111827;
+
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f2937;
+
+  --accent: #6366f1;
+  --accent-foreground: #ffffff;
+
+  --from: #1a1f4b;
+  --to: #fff;
+
+  --muted: #e5e7eb;
+  --muted-foreground: #6b7280;
+
+  --border: #d1d5db;
+  --input: #f9fafb;
+
+  --radius: 0.5rem;
+} */
+
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+
+  --primary: #60a5fa;
+  --primary-foreground: #0f172a;
+
+  --secondary: #1e293b;
+  --secondary-foreground: #e2e8f0;
+
+  --accent: #818cf8;
+  --accent-foreground: #1e293b;
+
+  --from: #1a1f4b;
+  --to: #000000;
+
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+
+  --border: #1e293b;
+  --input: #0f172a;
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+
+    --primary: #60a5fa;
+    --primary-foreground: #0f172a;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #e2e8f0;
+
+    --accent: #818cf8;
+    --accent-foreground: #1e293b;
+
+    --from: #1a1f4b;
+    --to: #000000;
+
+    --muted: #334155;
+    --muted-foreground: #94a3b8;
+
+    --border: #1e293b;
+    --input: #0f172a;
+  }
+}
+
+/* Tailwind theme integration (optional custom properties layer) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-from: var(--from);
+  --color-to: var(--to);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --radius: var(--radius);
+  --font-sans: var(--font-geist-sans, "Inter", sans-serif);
+  --font-mono: var(--font-geist-mono, "Fira Code", monospace);
+  --font-poppins: var(--font-poppins, "Poppins", sans-serif);
+}
+
+/* Base styles */
+body {
+  background-color: var(--background);
+  font-family: var(--font-poppins, system-ui, sans-serif);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+}
