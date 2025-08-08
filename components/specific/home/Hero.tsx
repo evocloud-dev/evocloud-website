@@ -88,15 +88,14 @@ export default function Hero() {
 
         <div className="md:max-w-screen-xl z-10">
           <div className="md:max-w-[60%]">
-            <H3 className="mb-4">Boost Agility, Reduce Time to Market, Scale Efficiently while Minimizing Cost. </H3>
+            <H3 className="mb-4">Embrace a multi-cloud strategy, reduce time to market, and save on cloud cost. </H3>
 
             <H1 className="mb-10">
               EvoCloud Enterprise-grade Cloud Native Platform
             </H1>
 
             <H2 className="mb-4">
-              A platform built around multi-clustering, multi-tenancy, and hybrid-IaaS with a greater focus on Security, AI workloads, and Autonomous operation in disconnected environment.
-              Leverage our provided self-service tools and automated workflows to boost agility, reduce infrastructure cost, and develop SaaS applications faster on a secure, scalable, and self-recovering platform.
+              EvoCloud aims to provide an open-source alternative to OpenShift, with built-in composable components, runtimes, and orchestrators.
             </H2>
 
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-10">
@@ -111,11 +110,11 @@ export default function Hero() {
                 // type="button"
                 className=""
               >
-                Contact Us
+                Enterprise Support
               </Button2>
             </div>
 
-            <H2 className="mb-4">Also available on:</H2>
+            <H3 className="mb-4">Supported Cloud Infrastructure:</H3>
 
             <div className="flex flex-wrap gap-2 sm:gap-4">
               <Button2 type="button">
