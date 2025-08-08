@@ -18,34 +18,30 @@ export default function Header() {
     {
       title: "Solutions",
       links: [
-        { title: "Automating ETL Tasks", href: "https://wso2.com/choreo/#" },
-        { title: "Observering Data", href: "https://wso2.com/choreo/#" },
-        { title: "Deploy a web app", href: "https://wso2.com/choreo/#" },
-        { title: "Microservices", href: "https://wso2.com/choreo/#" },
+        { title: "EvoCloud", href: "#" },
+        { title: "EvoCluster Apps", href: "#" },
+        { title: "Application Catalog", href: "#" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { title: "Docs", href: "#" },
-        { title: "Blog", href: "#" },
-        { title: "Products", href: "#" },
+        { title: "Documentation", href: "#" },
+        { title: "Blog & Tutorials", href: "#" },
+        { title: "Training Courses", href: "#" },
+        { title: "Certifications", href: "#" },
       ],
     },
     {
       title: "Comparisons",
       links: [
-        { title: "Backstage", href: "#" },
-        { title: "Harness", href: "#" },
-        { title: "Netlify", href: "#" },
+        { title: "EvoCloud vs OpenShift", href: "#" },
+        { title: "EvoCloud vs Rancher", href: "#" },
+        { title: "EvoCLoud vs VMware", href: "#" },
       ],
     },
     {
-      title: "Pricing",
-      href: "#",
-    },
-    {
-      title: "Support",
+      title: "Enterprise Support",
       href: "#",
     },
     {
