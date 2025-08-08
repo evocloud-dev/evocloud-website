@@ -9,7 +9,7 @@ import P1 from "@/components/ui/paragraphs/P1";
 
 export default function Learn() { 
   return (
-    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-12">
+    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
         <H1 className="text-foreground text-center">Learn More</H1>
 
@@ -53,7 +53,7 @@ export default function Learn() {
 
         <H1 className="text-foreground text-center">Security and Compliance</H1>
 
-        <P1 className="text-foreground text-center max-w-xl mx-auto">
+        <P1 className="text-foreground text-center max-w-3xl mx-auto">
           We leverage a minimalistic, cloud optimized, and immutable operating system with a small attack footprint to provide an environment for running hassle-free cloud-native applications. Besides, EvoCloud is built with data at rest and data in transit encryption. It also comes with a set of tools to enforce cluster wide security policies, manage RBAC and HBAC, collect security events, provide extended detection and response. See how EvoCloud is built with {" "}
           <Link href="#" className="underline">
             Security and Compliance

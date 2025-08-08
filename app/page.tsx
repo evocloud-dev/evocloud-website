@@ -6,7 +6,7 @@ import Signup from "@/components/specific/home/Signup";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="max-w-full overflow-x-hidden">
       <Hero />
       <Features/>
       <Why/>
