@@ -18,7 +18,7 @@ export default function Why() {
       </svg>
       <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 md:px-4">
         <div className="max-w-screen-xl w-full mx-auto space-y-10">
-          <H1 className="text-center">Why WSO2?</H1>
+          <H1 className="text-center">Why did we build EvoCloud?</H1>
           <SectionCard className="">
             <div className="md:basis-[60%]">
               <P1 className="text-foreground mb-6">

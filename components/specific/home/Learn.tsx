@@ -54,12 +54,10 @@ export default function Learn() {
         <H1 className="text-foreground text-center">Security and Compliance</H1>
 
         <P1 className="text-foreground text-center max-w-xl mx-auto">
-          At WSO2, we give you peace of mind that our cloud deployments adhere
-          to industry standards and best practices for data protection and a
-          secure app development experience. See how WSO2 handles{" "}
+          We leverage a minimalistic, cloud optimized, and immutable operating system with a small attack footprint to provide an environment for running hassle-free cloud-native applications. Besides, EvoCloud is built with data at rest and data in transit encryption. It also comes with a set of tools to enforce cluster wide security policies, manage RBAC and HBAC, collect security events, provide extended detection and response. See how EvoCloud is built with {" "}
           <Link href="#" className="underline">
-            Security and Compliance.
-          </Link>
+            Security and Compliance
+          </Link> in mind.
         </P1>
       </div>
     </div>

@@ -24,6 +24,8 @@ export default function Features() {
           repeat={3}
         />
 
+        <H1 className="text-primary mb-10">EvoCloud Platform compared to OpenShift</H1>
+
         <Cards>
           <Card className="min-h-64">
             <PTop>Deployment Time</PTop>
