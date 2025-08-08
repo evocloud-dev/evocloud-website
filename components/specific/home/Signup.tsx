@@ -32,7 +32,7 @@ export default function Signup() {
               // type="button"
               className=""
             >
-              Contact Us
+              Enterprise Support
             </Button2>
           </div>
         </div>

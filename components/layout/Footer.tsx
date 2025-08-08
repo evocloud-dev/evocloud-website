@@ -20,65 +20,76 @@ export default function Footer() {
     {
       title: "Products",
       links: [
-        { title: "WSO2 API Manager", href: "#" },
-        { title: "WSO2 API Platform for K8s", href: "#" },
-        { title: "Choreo for APIM", href: "#" },
+        { title: "EvoCloud Platform", href: "#" },
+        { title: "EvoCluster Apps", href: "#" },
+        { title: "EvoRuntime Services", href: "#" },
       ],
     },
     {
       title: "Integrations",
       links: [
-        { title: "WSO2 Integrator", href: "#" },
-        { title: "Choreo for Integration", href: "#" },
+        { title: "GCP Infrastructure", href: "#" },
+        { title: "Oracle Cloud Infrastructure", href: "#" },
+        { title: "AWS Infrastructure", href: "#" },
       ],
     },
     {
-      title: "Identity & Access Management",
+      title: "Core Components",
       links: [
-        { title: "WSO2 Identity Server", href: "#" },
-        { title: "Asgardeo", href: "#" },
+        { title: "Orchestration Layer", href: "#" },
+        { title: "Runtime Services", href: "#" },
+        { title: "Identity Provider", href: "#" },
+        { title: "CI/CD and GitOps", href: "#" },
+        { title: "Cloud-native Applications", href: "#" },
       ],
     },
     {
-      title: "Internal Developer Platform",
-      links: [{ title: "Choreo", href: "#" }],
+      title: "Platform Services",
+      links: [
+        { title: "Application Catalog", href: "#" },
+        { title: "Provided Services", href: "#" },
+      ],
     },
     {
-      title: "Solutions",
+      title: "Use Cases",
       links: [
-        { title: "Health care", href: "#" },
-        { title: "Finance", href: "#" },
-        { title: "Government", href: "#" },
+        { title: "Sovereign Cloud", href: "#" },
+        { title: "Internal Developer PaaS", href: "#" },
+        { title: "Hybrid IaaS Support", href: "#" },
+        { title: "Self-service Provisioning", href: "#" },
+        { title: "Unified Cloud Orchestration", href: "#" },
+        { title: "Multi-Cluster Management", href: "#" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { title: "Customer stories", href: "#" },
         { title: "Documentation", href: "#" },
-        { title: "Events", href: "#" },
-        { title: "Library", href: "#" },
-        { title: "Open Source", href: "#" },
-        { title: "Research", href: "#" },
+        { title: "Blog & Tutorials", href: "#" },
+        { title: "White Papers", href: "#" },
         { title: "Training & Certification", href: "#" },
+        { title: "News and Events", href: "#" },
+        { title: "Glossary", href: "#" },
       ],
     },
     {
       title: "Support",
       links: [
-        { title: "Subscriptions", href: "#" },
-        { title: "Updates", href: "#" },
-        { title: "Consulting Services", href: "#" },
+        { title: "Community Support", href: "#" },
+        { title: "Experts Consulting", href: "#" },
+        { title: "Managed Services", href: "#" },
+        { title: "Subscription Services", href: "#" },
+        { title: "FAQs", href: "#" },
       ],
     },
     {
       title: "Company",
       links: [
-        { title: "About WSO2", href: "#" },
-        { title: "Partners", href: "#" },
-        { title: "Team", href: "#" },
-        { title: "Careers", href: "#" },
-        { title: "News", href: "#" },
+        { title: "About Us", href: "#" },
+        { title: "Solution Partners", href: "#" },
+        { title: "Core Maintainers", href: "#" },
+        { title: "Join our Startup", href: "#" },
+        { title: "News and Events", href: "#" },
       ],
     },
   ];
@@ -89,16 +100,16 @@ export default function Footer() {
         <div className="max-w-screen-xl w-full mx-auto gap-4 sm:gap-x-6 sm:gap-y-12 flex flex-col-reverse sm:flex-row items-start">
           <div className="">
             <Card className="px-4 py-6 md:w-sm">
-              <P1 className="text-primary">Get Updates on Choreo</P1>
+              <P1 className="text-primary">Get Updates on EvoCloud</P1>
 
               <Input1 placeholder="Enter your email address" />
 
               <div className="flex items-center gap-2">
                 <CheckBox1 />
-                <Label1>I agree to the WSO2 Data Privacy Policy.</Label1>
+                <Label1>I agree to the EvoCloud Data Privacy Policy.</Label1>
               </div>
 
-              <Button3 type="button">Subscribe To choreo Newsletter</Button3>
+              <Button3 type="button">Subscribe to our Newsletter</Button3>
             </Card>
 
             <div className="p-4">
@@ -118,10 +129,10 @@ export default function Footer() {
                 </Link>
               </div>
               <Link2 href="#" className="text-foreground mb-2 inline-block">
-                @{new Date().getFullYear()} WSO2. All rights reserved
+                @{new Date().getFullYear()} EvoCloud, Inc. All rights reserved
               </Link2>
               {/* <Link2 href="#" className="text-foreground mb-2 inline-block">
-              @{new Date().getFullYear()} WSO2. All rights reserved
+              @{new Date().getFullYear()} EvoCloud, Inc. All rights reserved
             </Link2> */}
             </div>
           </div>

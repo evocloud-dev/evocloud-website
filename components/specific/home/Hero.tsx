@@ -88,16 +88,15 @@ export default function Hero() {
 
         <div className="md:max-w-screen-xl z-10">
           <div className="md:max-w-[60%]">
-            <H3 className="mb-4">TRANSFORM TO A CLOUD NATIVE ENTERPRISE</H3>
+            <H3 className="mb-4">Boost Agility, Reduce Time to Market, Scale Efficiently while Minimizing Cost. </H3>
 
             <H1 className="mb-10">
-              AI-Native Internal Developer Platform as a Service
+              EvoCloud Enterprise-grade Cloud Native Platform
             </H1>
 
             <H2 className="mb-4">
-              Automate workflows, reduce complexity, and empower teams to build,
-              secure, and deploy at scale with an all-in-one AI-native internal
-              developer platform.
+              A platform built around multi-clustering, multi-tenancy, and hybrid-IaaS with a greater focus on Security, AI workloads, and Autonomous operation in disconnected environment.
+              Leverage our provided self-service tools and automated workflows to boost agility, reduce infrastructure cost, and develop SaaS applications faster on a secure, scalable, and self-recovering platform.
             </H2>
 
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-10">
