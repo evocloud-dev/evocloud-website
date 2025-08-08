@@ -96,7 +96,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="px-4 py-6 md:px-4 md:py-12">
+      <footer className="px-4 py-6 md:px-4 md:py-16">
         <div className="max-w-screen-xl w-full mx-auto gap-4 sm:gap-x-6 sm:gap-y-12 flex flex-col-reverse sm:flex-row items-start">
           <div className="">
             <Card className="px-4 py-6 md:w-sm">

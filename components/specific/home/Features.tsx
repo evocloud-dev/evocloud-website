@@ -8,7 +8,7 @@ import P1 from "@/components/ui/paragraphs/P1";
 
 export default function Features() {
   return (
-    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-12">
+    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
         <Carousel
           logos={[

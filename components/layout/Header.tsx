@@ -14,6 +14,50 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
+  const links = [
+    {
+      title: "Solutions",
+      links: [
+        { title: "Automating ETL Tasks", href: "https://wso2.com/choreo/#" },
+        { title: "Observering Data", href: "https://wso2.com/choreo/#" },
+        { title: "Deploy a web app", href: "https://wso2.com/choreo/#" },
+        { title: "Microservices", href: "https://wso2.com/choreo/#" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { title: "Docs", href: "#" },
+        { title: "Blog", href: "#" },
+        { title: "Products", href: "#" },
+      ],
+    },
+    {
+      title: "Comparisons",
+      links: [
+        { title: "Backstage", href: "#" },
+        { title: "Harness", href: "#" },
+        { title: "Netlify", href: "#" },
+      ],
+    },
+    {
+      title: "Pricing",
+      href: "#",
+    },
+    {
+      title: "Support",
+      href: "#",
+    },
+    {
+      title: "Community",
+      href: "#",
+    },
+    {
+      title: "Developer",
+      href: "#",
+    }
+  ];
+
   return (
     <nav className="bg-background border-border">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-0 md:py-8">
@@ -47,14 +91,16 @@ export default function Header() {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-cta"
         >
-          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium p-4 md:p-0 mt-4 border rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-background">
-            <SimpleLink href="/" showDropdown>Solutions</SimpleLink>
-            <SimpleLink href="/" showDropdown>Resources</SimpleLink>
-            <SimpleLink href="/" showDropdown>Comparisons</SimpleLink>
-            <SimpleLink href="/">Pricing</SimpleLink>
-            <SimpleLink href="/">Support</SimpleLink>
-            <SimpleLink href="/">Community</SimpleLink>
-            <SimpleLink href="/">Developer</SimpleLink>
+          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium md:p-4 md:p-0 mt-4 border rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-background">
+            {links.map((link) => (
+              <SimpleLink
+                key={link.title}
+                href="/"
+                links={link.links}
+              >
+                {link.title}
+              </SimpleLink>
+            ))}
           </ul>
         </div>
       </div>
