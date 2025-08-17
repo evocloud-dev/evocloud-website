@@ -18,15 +18,15 @@ export default function Header() {
     {
       title: "Solutions",
       links: [
-        { title: "EvoCloud", href: "#" },
-        { title: "EvoCluster Apps", href: "#" },
-        { title: "Application Catalog", href: "#" },
+        { title: "EvoCloud", href: "/evocloud" },
+        { title: "EvoCluster Apps", href: "/evocluster-apps" },
+        { title: "Application Catalog", href: "/application-catalog" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { title: "Documentation", href: "#" },
+        { title: "Documentation", href: "/documentation" },
         { title: "Blog & Tutorials", href: "#" },
         { title: "Training Courses", href: "#" },
         { title: "Certifications", href: "#" },

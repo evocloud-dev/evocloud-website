@@ -13,8 +13,14 @@ export default function Tab({
   active = false,
   className,
   href = "#",
+  onClick,
   ...props
 }: TabProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    onClick?.(e);
+  }
+
   return (
     <li className="me-2">
       <Link
@@ -27,6 +33,7 @@ export default function Tab({
           className
         )}
         aria-current={active ? "page" : undefined}
+        onClick={handleClick}
         {...props}
       >
         {children}

@@ -1,12 +1,48 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Card, { Cards } from "@/components/general/Card";
 import Tab, { Tabs } from "@/components/general/Tab";
 import Carousel from "@/components/general/Carousel";
 import { PTop, PBottom, PMid } from "@/components/ui/paragraphs/CardParagraphs";
 import H1 from "@/components/ui/headers/H1";
 import P1 from "@/components/ui/paragraphs/P1";
+import SimplifyInfrastructure from "@/components/specific/home/SimplifyInfrastructure";
+import SaveCosts from "@/components/specific/home/SaveCosts";
+import AutomateWorkflows from "@/components/specific/home/AutomateWorkflows";
+import EnableAI from "@/components/specific/home/EnableAI";
+import ObserveAndGovern from "@/components/specific/home/ObserveAndGovern";
+import ModernApps from "@/components/specific/home/ModernApps";
+
+const tabs = [
+  { id: "simplify-infrastructure", label: "Simplify Infrastructure" },
+  { id: "save-costs", label: "Save Costs" },
+  { id: "automate-workflows", label: "Automate Workflows" },
+  { id: "enable-ai", label: "Enable AI" },
+  { id: "observe-and-govern", label: "Observe and Govern" },
+  { id: "modern-apps", label: "Modern Apps" },
+];
 
 export default function Features() {
+  const [activeTab, setActiveTab] = useState("simplify-infrastructure");
+  useEffect(() => {
+    const updateFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && tabs.some((t) => t.id === hash)) {
+        setActiveTab(hash);
+      }
+    };
+
+    updateFromHash(); // initial load
+    window.addEventListener("hashchange", updateFromHash);
+    return () => window.removeEventListener("hashchange", updateFromHash);
+  }, []);
+
+  const switchTabHandler = (id: string) => {
+    setActiveTab(id);
+    window.location.hash = id; // ✅ does not reset scroll
+  };
+
   return (
     <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
@@ -24,7 +60,9 @@ export default function Features() {
           repeat={3}
         />
 
-        <H1 className="text-primary mb-10">EvoCloud Platform compared to OpenShift</H1>
+        <H1 className="text-primary mb-10">
+          EvoCloud Platform compared to OpenShift
+        </H1>
 
         <Cards>
           <Card className="min-h-64">
@@ -45,38 +83,24 @@ export default function Features() {
         </Cards>
 
         <Tabs>
-          <Tab href="#" active={false}>
-            Simplify Infrastructure
-          </Tab>
-          <Tab href="#" active={true}>
-            Save Costs
-          </Tab>
-          <Tab href="#" active={false}>
-            Automate Workflows
-          </Tab>
-          <Tab href="#" active={false}>
-            Enable AI
-          </Tab>
-          <Tab href="#" active={false}>
-            Observe & Govern
-          </Tab>
-          <Tab href="#" active={false}>
-            Modern Apps
-          </Tab>
+          {tabs.map((tab) => (
+            <Tab
+              key={tab.id}
+              href="#"
+              onClick={() => switchTabHandler(tab.id)}
+              active={activeTab === tab.id}
+            >
+              {tab.label}
+            </Tab>
+          ))}
         </Tabs>
 
-        <div className="flex items-center flex-col md:flex-row gap-4">
-          <div className="">
-            <H1 className="text-primary mb-4">10X Platform Engineering</H1>
-            <P1 className="text-muted-foreground">
-              Choreo provides a unified platform for managing infrastructure,
-              pipelines, and deployments. This allows platform engineers to
-              provide an internal developer platform that enables developers to
-              focus on building digital experiences.
-            </P1>
-          </div>
-          <img src="/images/card-cilium.webp" alt="" className="" />
-        </div>
+        {activeTab === "simplify-infrastructure" && <SimplifyInfrastructure />}
+        {activeTab === "save-costs" && <SaveCosts />}
+        {activeTab === "automate-workflows" && <AutomateWorkflows />}
+        {activeTab === "enable-ai" && <EnableAI />}
+        {activeTab === "observe-and-govern" && <ObserveAndGovern />}
+        {activeTab === "modern-apps" && <ModernApps />}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
           <div>
@@ -89,9 +113,7 @@ export default function Features() {
             </P1>
           </div>
           <div>
-            <P1 className="font-bold text-primary">
-              Kubernetes Stuff:{" "}
-            </P1>
+            <P1 className="font-bold text-primary">Kubernetes Stuff: </P1>
             <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
               Extend Kubernetes with fine-grained access controls,
               multi-environment support, and other capabilities–integrating over
