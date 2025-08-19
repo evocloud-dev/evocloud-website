@@ -7,10 +7,10 @@ export default function AutomateWorkflows() {
     <div className="flex items-center flex-col md:flex-row gap-4">
       <img src="/images/card-cilium.webp" alt="" className="" />
       <div className="">
-        <H1 className="text-primary mb-4">Automate Costs</H1>
+        <H1 className="text-primary mb-4">Automation at its Core</H1>
         <P1 className="text-muted-foreground">
-          Choreo provides a unified platform for managing infrastructure,
-          pipelines, and deployments. This allows platform engineers to provide
+          The EvoCloud platform is built around a robust automation and orchestration framework,
+          that allows platform engineers to provide
           an internal developer platform that enables developers to focus on
           building digital experiences.
         </P1>

@@ -5,16 +5,16 @@ import P1 from "@/components/ui/paragraphs/P1";
 export default function SimplifyInfrastructure() {
   return (
     <div className="flex items-center flex-col md:flex-row gap-4">
+      <img src="/images/card-cilium.webp" alt="" className="" />
       <div className="">
-        <H1 className="text-primary mb-4">10X Platform Engineering</H1>
+        <H1 className="text-primary mb-4">Platform Engineering at Scale</H1>
         <P1 className="text-muted-foreground">
-          Choreo provides a unified platform for managing infrastructure,
-          pipelines, and deployments. This allows platform engineers to provide
-          an internal developer platform that enables developers to focus on
-          building digital experiences.
+          EvoCloud provides a unified platform for deploying and managing platforms, infrastructures,
+          application runtimes, and deployments across various cloud environment.
+          It is fault-tolerant and highly available out of the box, which allows Engineers to run
+          modern and complex applications with no sweat leveraging built-in tools and orchestrators.
         </P1>
       </div>
-      <img src="/images/card-cilium.webp" alt="" className="" />
     </div>
   );
 }

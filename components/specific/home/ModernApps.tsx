@@ -8,7 +8,7 @@ export default function ModernApps() {
       <div className="">
         <H1 className="text-primary mb-4">Automate Costs</H1>
         <P1 className="text-muted-foreground">
-          Choreo provides a unified platform for managing infrastructure,
+          EvoCloud provides a unified platform for managing infrastructure,
           pipelines, and deployments. This allows platform engineers to provide
           an internal developer platform that enables developers to focus on
           building digital experiences.

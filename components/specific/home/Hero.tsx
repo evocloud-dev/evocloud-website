@@ -88,7 +88,7 @@ export default function Hero() {
 
         <div className="md:max-w-screen-xl z-10">
           <div className="md:max-w-[60%]">
-            <H3 className="mb-4">Embrace a multi-cloud strategy, reduce time to market, and save on cloud cost. </H3>
+            <H3 className="mb-4">Embrace a multi-cloud strategy. Reduce time to market. Save on cloud cost. </H3>
 
             <H1 className="mb-10">
               EvoCloud Enterprise-grade Cloud Native Platform
