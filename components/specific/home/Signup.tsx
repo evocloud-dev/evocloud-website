@@ -8,13 +8,13 @@ export default function Signup() {
     <>
       <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 py-6 md:px-4 md:py-16">
         <div className="max-w-screen-xl w-full mx-auto space-y-10">
-          <H1 className="text-center">Sign Up and Get Started</H1>
+          <H1 className="text-center">Start your IT Infrastructure Modernization with EvoCloud</H1>
           <div className="flex justify-center flex-wrap gap-2 sm:gap-4">
             <Button1
               // type="button"
               className=""
             >
-              Get Started For Free
+              Self-managed
             </Button1>
 
             <Button2

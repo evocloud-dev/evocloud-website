@@ -15,12 +15,12 @@ import ObserveAndGovern from "@/components/specific/home/ObserveAndGovern";
 import ModernApps from "@/components/specific/home/ModernApps";
 
 const tabs = [
-  { id: "simplify-infrastructure", label: "Simplify Infrastructure" },
-  { id: "save-costs", label: "Save Costs" },
-  { id: "automate-workflows", label: "Automate Workflows" },
-  { id: "enable-ai", label: "Enable AI" },
-  { id: "observe-and-govern", label: "Observe and Govern" },
-  { id: "modern-apps", label: "Modern Apps" },
+  { id: "simplify-infrastructure", label: "Simplify Operations" },
+  { id: "save-costs", label: "Cost-Efficient" },
+  { id: "automate-workflows", label: "Promote Everything as Code" },
+  { id: "enable-ai", label: "Self-Service & Self-Healing" },
+  { id: "observe-and-govern", label: "Enforce Compliance" },
+  { id: "modern-apps", label: "Support Modern Workloads" },
 ];
 
 export default function Features() {
@@ -61,24 +61,24 @@ export default function Features() {
         />
 
         <H1 className="text-primary mb-10">
-          EvoCloud Platform compared to OpenShift
+          Build your IT Infrastructure on EvoCloud
         </H1>
 
         <Cards>
           <Card className="min-h-64">
             <PTop>Deployment Time</PTop>
             <PMid className="text-primary">40% ↓</PMid>
-            <PBottom> Wealth Management (USA)</PBottom>
+            <PBottom> Reduce Deployment Time and Speed-up Time to Market </PBottom>
           </Card>
           <Card className="min-h-64">
             <PTop>Cost Savings</PTop>
             <PMid className="text-primary">63%</PMid>
-            <PBottom> University of Edinburgh </PBottom>
+            <PBottom> Save on Cloud Cost and Engineering Cycles </PBottom>
           </Card>
           <Card className="min-h-64">
-            <PTop>Fast Recovery</PTop>
-            <PMid className="text-primary">Cloud</PMid>
-            <PBottom> Home Automation (Australia)</PBottom>
+            <PTop>Multi-cloud Strategy</PTop>
+            <PMid className="text-primary">Multi-Cloud</PMid>
+            <PBottom> Risk Reduction and High Availability </PBottom>
           </Card>
         </Cards>
 
@@ -102,10 +102,13 @@ export default function Features() {
         {activeTab === "observe-and-govern" && <ObserveAndGovern />}
         {activeTab === "modern-apps" && <ModernApps />}
 
+        <H1 className="text-primary mb-10">
+           Designed for Enterprise Use Cases
+        </H1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
           <div>
             <P1 className="font-bold text-primary">
-              Run Where Your Data Lives:{" "}
+              DNS, PKI, Dogtag Infrastructure:{" "}
             </P1>
             <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
               Deploy and manage Kubernetes anywhere (AWS, Azure, GCP, Vultr, or
@@ -113,7 +116,9 @@ export default function Features() {
             </P1>
           </div>
           <div>
-            <P1 className="font-bold text-primary">Kubernetes Stuff: </P1>
+            <P1 className="font-bold text-primary">
+              Multi-IaaS Kubernetes Platform:{" "}
+            </P1>
             <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
               Extend Kubernetes with fine-grained access controls,
               multi-environment support, and other capabilities–integrating over
@@ -122,13 +127,44 @@ export default function Features() {
           </div>
           <div>
             <P1 className="font-bold text-primary">
-              Multi-Environment Delivery:{" "}
+              Multi-Cloud, On-Premises, and Edge:{" "}
             </P1>
             <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
               Deploy and promote applications on Kubernetes clusters across
               multiple clouds and define continuous deployment pipelines.{" "}
             </P1>
           </div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
+                  <div>
+                    <P1 className="font-bold text-primary">
+                      Automated Workloads and GitOps Enabled:{" "}
+                    </P1>
+                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                      Deploy and manage Kubernetes anywhere (AWS, Azure, GCP, Vultr, or
+                      on any upstream-compatible Kubernetes infrastructure).
+                    </P1>
+                  </div>
+                  <div>
+                    <P1 className="font-bold text-primary">
+                      Composable Modules and Self-Service:{" "}
+                    </P1>
+                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                      Extend Kubernetes with fine-grained access controls,
+                      multi-environment support, and other capabilities–integrating over
+                      20+ CNCF projects under one control panel.
+                    </P1>
+                  </div>
+                  <div>
+                    <P1 className="font-bold text-primary">
+                      Open Source and Extensible:{" "}
+                    </P1>
+                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                      Deploy and promote applications on Kubernetes clusters across
+                      multiple clouds and define continuous deployment pipelines.{" "}
+                    </P1>
+                  </div>
         </div>
       </div>
     </div>
