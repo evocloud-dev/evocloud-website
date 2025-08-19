@@ -25,6 +25,7 @@ const tabs = [
 
 export default function Features() {
   const [activeTab, setActiveTab] = useState("simplify-infrastructure");
+
   useEffect(() => {
     const updateFromHash = () => {
       const hash = window.location.hash.replace("#", "");

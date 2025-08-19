@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -22,22 +25,32 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "EvoCloud",
-  description: "Contribute EvoCloud Platform Guides Documentation and guides to deploy, configure, manage, and monitor the EvoCloud Platform on your IaaS of choice.",
+  description:
+    "Contribute EvoCloud Platform Guides Documentation and guides to deploy, configure, manage, and monitor the EvoCloud Platform on your IaaS of choice.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
