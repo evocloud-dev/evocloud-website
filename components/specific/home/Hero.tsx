@@ -10,76 +10,14 @@ import { FaShield } from "react-icons/fa6";
 import { IoLogoMicrosoft } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
 import { SiGooglecloud } from "react-icons/si";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const positions = [
-    {
-      top: 10.0,
-      left: 70.0,
-      rotate: 12,
-      scale: "0.95",
-      opacity: "0.15",
-    },
-    {
-      top: 30.0,
-      left: 75.0,
-      rotate: 22,
-      scale: "1.1",
-      opacity: "0.18",
-    },
-    {
-      top: 55.0,
-      left: 65.0,
-      rotate: 33,
-      scale: "1.05",
-      opacity: "0.17",
-    },
-    {
-      top: 80.0,
-      left: 78.0,
-      rotate: 28,
-      scale: "0.93",
-      opacity: "0.13",
-    },
-
-    {
-      top: 20.0,
-      left: 15.0,
-      rotate: 7,
-      scale: "0.88",
-      opacity: "0.14",
-    },
-    {
-      top: 70.0,
-      left: 10.0,
-      rotate: 18,
-      scale: "1.12",
-      opacity: "0.16",
-    },
-  ];
-
-  {
-    /* {positions?.map((pos, i) => {
-          return (
-            <FaShield
-              key={i}
-              className="absolute text-background z-0 pointer-events-none hidden md:block"
-              style={{
-                top: `${pos.top}%`,
-                left: `${pos.left}%`,
-                transform: `rotate(${pos.rotate}deg) scale(${pos.scale})`,
-                opacity: pos.opacity,
-                fontSize: "10rem",
-                zIndex: 1,
-              }}
-            />
-          );
-        })} */
-  }
+  const t = useTranslations("HomePage");
 
   return (
     <>
-      <section className="relative h-max md:h-screen bg-cover bg-center px-4 py-6 md:px-4 md:py-16 flex items-center justify-center bg-linear-to-b from-accent to-primary text-background">
+      <section className="relative h-max md:h-[85vh] bg-cover bg-center px-4 py-6 md:px-4 md:py-16 flex items-center justify-center bg-linear-to-b from-accent to-primary text-background">
         <FaShield className="absolute opacity-25 text-[10rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
         <FaShield className="absolute opacity-20 text-[15rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
         <FaShield className="absolute opacity-15 text-[20rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
@@ -88,14 +26,17 @@ export default function Hero() {
 
         <div className="md:max-w-screen-xl z-10">
           <div className="md:max-w-[60%]">
-            <H3 className="mb-4">Embrace a multi-cloud strategy. Reduce time to market. Save on cloud cost. </H3>
+            <H3 className="mb-4">
+              {t("test")}
+            </H3>
 
             <H1 className="mb-10">
               EvoCloud Enterprise-grade Cloud Native Platform
             </H1>
 
             <H2 className="mb-4">
-              EvoCloud aims to provide an open-source alternative to OpenShift, with built-in composable components, runtimes, and orchestrators.
+              EvoCloud aims to provide an open-source alternative to OpenShift,
+              with built-in composable components, runtimes, and orchestrators.
             </H2>
 
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-10">
