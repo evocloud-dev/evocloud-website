@@ -9,10 +9,8 @@ export default function AutomateWorkflows() {
       <div className="">
         <H1 className="text-primary mb-4">Automation at its Core</H1>
         <P1 className="text-muted-foreground">
-          The EvoCloud platform is built around a robust automation and orchestration framework,
-          that allows platform engineers to provide
-          an internal developer platform that enables developers to focus on
-          building digital experiences.
+          We leverage Infrastructure as Code, Policy as Code, GitOps, and some Controller logic to ensure desire state, drift detection, and smart reconciliation.
+          Building around such a robust automation and orchestration framework makes it easier for platform engineers to build and scale the EvoCloud platform within clear guardrails and security best practices.
         </P1>
       </div>
     </div>

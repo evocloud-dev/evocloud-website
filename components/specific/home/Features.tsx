@@ -128,7 +128,7 @@ export default function Features() {
           </div>
           <div>
             <P1 className="font-bold text-primary">
-              Multi-Cloud, On-Premises, and Edge:{" "}
+              Multi-Cloud, On-Premise, and Edge:{" "}
             </P1>
             <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
               Deploy and promote applications on Kubernetes clusters across
