@@ -1,4 +1,4 @@
 # Changes
 
 - Changed Hero section height from full screen 100% width to 85%.
-- Add 
+- Add the nextl intl pcakage for translationso for en, fr
