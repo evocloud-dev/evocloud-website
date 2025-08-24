@@ -10,9 +10,9 @@ export default function SimplifyInfrastructure() {
         <H1 className="text-primary mb-4">Platform Engineering at Scale</H1>
         <P1 className="text-muted-foreground">
           EvoCloud provides a unified platform for deploying and managing platforms, infrastructures,
-          application runtimes, and deployments across various cloud environment.
-          It is fault-tolerant and highly available out of the box, which allows Engineers to run
-          modern and complex applications with no sweat leveraging built-in tools and orchestrators.
+          and application runtimes in various cloud environment.
+          It is fault-tolerant, highly available, and allows Engineers to run
+          modern and complex applications with no sweat.
         </P1>
       </div>
     </div>

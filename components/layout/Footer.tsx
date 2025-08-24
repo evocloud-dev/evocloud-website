@@ -129,10 +129,10 @@ export default function Footer() {
                 </Link>
               </div>
               <Link2 href="#" className="text-foreground mb-2 inline-block">
-                @{new Date().getFullYear()} EvoCloud, Inc. All rights reserved
+                @{new Date().getFullYear()} EvoCloud. All rights reserved
               </Link2>
               {/* <Link2 href="#" className="text-foreground mb-2 inline-block">
-              @{new Date().getFullYear()} EvoCloud, Inc. All rights reserved
+              @{new Date().getFullYear()} EvoCloud. All rights reserved
             </Link2> */}
             </div>
           </div>

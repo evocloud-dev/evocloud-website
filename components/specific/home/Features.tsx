@@ -15,12 +15,12 @@ import ObserveAndGovern from "@/components/specific/home/ObserveAndGovern";
 import ModernApps from "@/components/specific/home/ModernApps";
 
 const tabs = [
-  { id: "simplify-infrastructure", label: "Simplify Operations" },
-  { id: "save-costs", label: "Cost-Efficient" },
-  { id: "automate-workflows", label: "Promote Everything as Code" },
+  { id: "simplify-infrastructure", label: "Simplify Operation" },
+  { id: "save-costs", label: "Cost-Efficiency" },
+  { id: "automate-workflows", label: "Everything as Code" },
   { id: "enable-ai", label: "Self-Service & Self-Healing" },
   { id: "observe-and-govern", label: "Enforce Compliance" },
-  { id: "modern-apps", label: "Support Modern Workloads" },
+  { id: "modern-apps", label: "Support for Modern Workloads" },
 ];
 
 export default function Features() {

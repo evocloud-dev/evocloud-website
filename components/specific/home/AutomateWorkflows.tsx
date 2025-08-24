@@ -9,8 +9,16 @@ export default function AutomateWorkflows() {
       <div className="">
         <H1 className="text-primary mb-4">Automation at its Core</H1>
         <P1 className="text-muted-foreground">
-          We leverage Infrastructure as Code, Policy as Code, GitOps, and some Controller logic to ensure desire state, drift detection, and smart reconciliation.
-          Building around such a robust automation and orchestration framework makes it easier for platform engineers to build and scale the EvoCloud platform within clear guardrails and security best practices.
+          Built around a robust automation and orchestration framework,
+          EvoCloud makes it easier for platform engineers to build and
+          scale within clear guardrails and security best practices.
+          Benefits of using the EvoCloud Platform:
+          <li> Infrastructure as Code </li>
+          <li> Application as Code </li>
+          <li> Policy as Code </li>
+          <li> Orchestration Framework </li>
+          <li> GitOps and Controller logic </li>
+          <li> Desire State, Drift Detection, and Smart Reconciliation </li>
         </P1>
       </div>
     </div>
