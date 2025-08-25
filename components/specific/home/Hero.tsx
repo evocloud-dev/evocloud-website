@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <>
-      <section className="relative h-max md:h-[85vh] bg-cover bg-center px-4 py-6 md:px-4 md:py-16 flex items-center justify-center bg-linear-to-b from-accent to-primary text-background">
+      <section className="relative h-max md:h-[75vh] bg-cover bg-center px-4 py-6 md:px-4 md:py-16 flex items-center justify-center bg-linear-to-b from-accent to-primary text-background">
         <FaShield className="absolute opacity-25 text-[10rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
         <FaShield className="absolute opacity-20 text-[15rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
         <FaShield className="absolute opacity-15 text-[20rem] top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 text-background z-0 pointer-events-none hidden md:block" />
