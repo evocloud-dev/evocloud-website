@@ -47,6 +47,11 @@ export default function Features() {
   return (
     <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
+
+        <H1 className="text-primary mb-4">
+          Trusted By Industry Leaders
+        </H1>
+
         <Carousel
           logos={[
             "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_clearitt.webp",
