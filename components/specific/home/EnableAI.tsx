@@ -1,12 +1,13 @@
 import React from "react";
 import H1 from "@/components/ui/headers/H1";
 import P1 from "@/components/ui/paragraphs/P1";
+import Image from "next/image";
 
 export default function EnableAI() {
   return (
     <div className="flex items-center flex-col md:flex-row gap-4">
       <div className="">
-        <H1 className="text-primary mb-4">Automate Costs</H1>
+        <H1 className="text-primary mb-4">EvoCloud Architecture</H1>
         <P1 className="text-muted-foreground">
           EvoCloud provides a unified platform for managing infrastructure,
           pipelines, and deployments. This allows platform engineers to provide
@@ -14,7 +15,13 @@ export default function EnableAI() {
           building digital experiences.
         </P1>
       </div>
-      <img src="/images/card-cilium.webp" alt="" className="" />
+      <Image
+        src="/images/evocloud-architecture.webp"
+        width={640}
+        height={650}
+        alt="EvoCloud Multicloud"
+        className="bg-white"
+      />
     </div>
   );
 }
