@@ -49,8 +49,9 @@ export default function Features() {
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
 
         <H1 className="text-primary mb-4">
-          Trusted By Industry Leaders
+          Solution and Ecosystem Partners
         </H1>
+        <span className="text-foreground text-center">Innovation doesn’t happen in a silo. There is no need to re-invente the wheel. We build and optimize innovative solutions for enterprise use cases.</span>
 
         <Carousel
           logos={[
