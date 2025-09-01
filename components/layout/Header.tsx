@@ -40,10 +40,10 @@ export default function Header() {
         { title: "EvoCLoud vs VMware", href: "#" },
       ],
     },
-    // {
-    //   title: "Enterprise Support",
-    //   href: "#",
-    // },
+    {
+      title: "Enterprise Support",
+      href: "#",
+    },
     {
       title: "Community",
       href: "#",
@@ -51,10 +51,6 @@ export default function Header() {
     {
       title: "About",
       href: "/about",
-    },
-    {
-      title: "Developer",
-      href: "#",
     }
   ];
 
