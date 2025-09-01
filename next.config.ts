@@ -3,6 +3,9 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    domains: ['upload.wikimedia.org', "www.drupal.org", "avatar.iran.liara.run"],
+  },
 };
 
 const withNextIntl = createNextIntlPlugin();
