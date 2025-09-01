@@ -49,8 +49,8 @@ export default function Header() {
       href: "#",
     },
     {
-      title: "Developer",
-      href: "#",
+      title: "About",
+      href: "/about",
     }
   ];
 
@@ -58,7 +58,7 @@ export default function Header() {
     <nav className="bg-background border-border">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-0 md:py-8">
         <Link
-          href="https://flowbite.com/"
+          href="/"
           className="flex items-center space-x-2 rtl:space-x-reverse"
         >
           <Image
@@ -91,7 +91,7 @@ export default function Header() {
             {links.map((link) => (
               <SimpleLink
                 key={link.title}
-                href="/"
+                href={link.href}
                 links={link.links}
               >
                 {link.title}
