@@ -11,11 +11,11 @@ export default function SimplifyInfrastructure() {
         width={640}
         height={650}
         alt="EvoCloud Multicloud"
-        className="bg-white"
+        className="bg-white border border-border shadow-md rounded-2xl"
       />
       <div className="">
         <H1 className="text-primary mb-4">Platform Engineering at Scale</H1>
-        <P1 className="text-muted-foreground">
+        <P1 className="text-secondary">
           EvoCloud provides a unified platform for deploying and managing platforms, infrastructures,
           and application runtimes in various cloud environment.
           It is fault-tolerant, highly available, and allows Engineers to run

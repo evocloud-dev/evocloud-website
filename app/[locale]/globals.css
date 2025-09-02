@@ -7,8 +7,10 @@
   --background: #0f172a;
   --foreground: #f8fafc;
 
-  --primary: #60a5fa;
+  --primary: #023fff;
   --primary-foreground: #0f172a;
+
+  --tertiary: #ffbb00;
 
   --secondary: #1e293b;
   --secondary-foreground: #e2e8f0;
@@ -60,6 +62,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-tertiary: var(--tertiary);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-from: var(--from);

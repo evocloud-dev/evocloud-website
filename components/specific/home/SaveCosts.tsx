@@ -1,13 +1,14 @@
 import React from "react";
 import H1 from "@/components/ui/headers/H1";
 import P1 from "@/components/ui/paragraphs/P1";
+import Image from "next/image";
 
 export default function SaveCosts() {
   return (
     <div className="flex items-center flex-col md:flex-row gap-4">
       <div className="">
         <H1 className="text-primary mb-4">Save on Cost</H1>
-        <P1 className="text-muted-foreground">
+        <P1 className="text-secondary">
           With its built-in automated workflows, EvoCloud optimizes infrastructure cost
           by leveraging spot instances, auto-scaling capabilities, and real-time cost analysis.
           <li> A cost-efficient strategy could make use of multi-cloud, geo-location, timezone,
@@ -16,7 +17,13 @@ export default function SaveCosts() {
           application catalogs to speed-up app composition. </li>
         </P1>
       </div>
-      <img src="/images/card-cilium.webp" alt="" className="" />
+      <Image
+        src="/images/card-cilium.webp"
+        width={640}
+        height={650}
+        alt="EvoCloud Multicloud"
+        className="bg-white border border-border shadow-md rounded-2xl"
+      />
     </div>
   );
 }

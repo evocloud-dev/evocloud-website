@@ -51,7 +51,7 @@ export function Tabs({
 }) {
   return (
     <div className={twMerge("flex justify-start", className)}>
-      <div className="text-sm font-medium text-center max-w-full overflow-x-auto overflow-y-hidden md:w-auto text-muted-foreground border-b border-border">
+      <div className="text-sm font-medium text-center max-w-full overflow-x-auto overflow-y-hidden md:w-auto text-secondary border-b border-border">
         <ul className="flex md:flex-wrap -mb-px">{children}</ul>
       </div>
     </div>

@@ -8,7 +8,7 @@ export default function ObserveAndGovern() {
       <img src="/images/card-cilium.webp" alt="" className="" />
       <div className="">
         <H1 className="text-primary mb-4">Automate Costs</H1>
-        <P1 className="text-muted-foreground">
+        <P1 className="text-secondary">
           EvoCloud provides a unified platform for managing infrastructure,
           pipelines, and deployments. This allows platform engineers to provide
           an internal developer platform that enables developers to focus on

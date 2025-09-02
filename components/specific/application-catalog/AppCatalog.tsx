@@ -80,69 +80,69 @@ const servicesByCategory: ServicesByCategory = {
     {
       name: "CloudNativePG",
       desc: "A cloud-native, highly available, PostgreSQL database cluster with a primary/standby architecture.",
-      icon: <DiPostgresql size={50} className="text-muted-foreground" />,
+      icon: <DiPostgresql size={50} className="text-secondary" />,
       badge: "Runtime",
       enterprise: true,
     },
     {
       name: "MySQL",
       desc: "The world’s most popular open source database.",
-      icon: <DiMysql size={50} className="text-muted-foreground" />,
+      icon: <DiMysql size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "MongoDB",
       desc: "NoSQL document database for modern applications.",
-      icon: <DiMongodb size={50} className="text-muted-foreground" />,
+      icon: <DiMongodb size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Redis",
       desc: "In-memory key-value data store.",
-      icon: <SiRedis size={50} className="text-muted-foreground" />,
+      icon: <SiRedis size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "MariaDB",
       desc: "Community-developed fork of MySQL.",
-      icon: <SiMariadb size={50} className="text-muted-foreground" />,
+      icon: <SiMariadb size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Ansible",
       desc: "Configuration management tool for application deployment and lifecycle management.",
-      icon: <SiAnsible size={50} className="text-muted-foreground" />,
+      icon: <SiAnsible size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Terraform",
       desc: "Infrastructure automation tool for managing infrastructure lifecycle safely and efficiently.",
-      icon: <SiTerraform  size={50} className="text-muted-foreground" />,
+      icon: <SiTerraform  size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Packer",
       desc: "Machine image automation tool for creating golden images and multi-cloud machine images.",
-      icon: <SiPacker size={50} className="text-muted-foreground" />,
+      icon: <SiPacker size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
         name: "Vault",
         desc: "A Secret management platform to securely store, access, and manage secrets and other sensitive data.",
-        icon: <SiVault  size={50} className="text-muted-foreground" />,
+        icon: <SiVault  size={50} className="text-secondary" />,
         badge: "Runtime",
     },
     {
       name: "Dapr",
       desc: "Distributed application runtime that provides building block APIs and components for cloud-native development.",
-      icon: <SiDapr size={50} className="text-muted-foreground" />,
+      icon: <SiDapr size={50} className="text-secondary" />,
       badge: "Runtime",
       enterprise: true,
     },
     {
       name: "FluxCD",
       desc: "Flux is a set of controllers that provide a continuous and progressive delivery mechanism for Kubernetes.",
-      icon: <SiFlux size={50} className="text-muted-foreground" />,
+      icon: <SiFlux size={50} className="text-secondary" />,
       badge: "Runtime",
       enterprise: true,
     },
@@ -152,55 +152,55 @@ const servicesByCategory: ServicesByCategory = {
     {
       name: "VsCode",
       desc: "Open Source code editor and AI interacted development environment.",
-      icon: <VscVscode size={50} className="text-muted-foreground" />,
+      icon: <VscVscode size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Brave",
       desc: "HTML5 web client and browser with better privacy, faster webpage rendering, and easier navigation.",
-      icon: <SiBrave size={50} className="text-muted-foreground" />,
+      icon: <SiBrave size={50} className="text-secondary" />,
       badge: "Addon",
     },
     {
       name: "Cilium CNI",
       desc: "Advanced cloud-native network interface with eBPF and Gateway API support.",
-      icon: <SiCilium size={50} className="text-muted-foreground" />,
+      icon: <SiCilium size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Helm",
       desc: "Package manager for Kubernetes application deployment and lifecycle management.",
-      icon: <SiHelm size={50} className="text-muted-foreground" />,
+      icon: <SiHelm size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Trivy",
       desc: "A security scanner tool for finding vulnerabilities on artifacts, container images, Kubernetes clusters, and more.",
-      icon: <SiTrivy size={50} className="text-muted-foreground" />,
+      icon: <SiTrivy size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Joomla",
       desc: "Another open-source CMS alternative.",
-      icon: <SiJoomla size={50} className="text-muted-foreground" />,
+      icon: <SiJoomla size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Matomo",
       desc: "Self-hosted web analytics platform.",
-      icon: <SiMatomo size={50} className="text-muted-foreground" />,
+      icon: <SiMatomo size={50} className="text-secondary" />,
       badge: "Addon",
     },
     {
       name: "Odoo",
       desc: "Business apps suite including CRM & ERP.",
-      icon: <SiOdoo size={50} className="text-muted-foreground" />,
+      icon: <SiOdoo size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "Discourse",
       desc: "Modern forum/discussion platform.",
-      icon: <SiDiscourse size={50} className="text-muted-foreground" />,
+      icon: <SiDiscourse size={50} className="text-secondary" />,
       badge: "Composition",
     },
   ],
@@ -209,19 +209,19 @@ const servicesByCategory: ServicesByCategory = {
     {
       name: "Jenkins",
       desc: "Automation server for CI/CD.",
-      icon: <SiJenkins size={50} className="text-muted-foreground" />,
+      icon: <SiJenkins size={50} className="text-secondary" />,
       badge: "Composition",
     },
     {
       name: "SonarQube",
       desc: "Code quality and security tool.",
-      icon: <SiSonarqube size={50} className="text-muted-foreground" />,
+      icon: <SiSonarqube size={50} className="text-secondary" />,
       badge: "Addon",
     },
     {
       name: "OpenJDK",
       desc: "Open source implementation of the Java Platform Standard Edition.",
-      icon: <FaJava size={50} className="text-muted-foreground" />,
+      icon: <FaJava size={50} className="text-secondary" />,
       badge: "Addon",
     },
   ],
@@ -230,82 +230,82 @@ const servicesByCategory: ServicesByCategory = {
     {
       name: "Docker",
       desc: "A container runtime interface for building and running containerized applications on any hosts.",
-      icon: <SiDocker size={50} className="text-muted-foreground" />,
+      icon: <SiDocker size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
         name: "Containerd",
         desc: "A container runtime interface for containerized application lifecycle management on host systems.",
-        icon: <SiContainerd size={50} className="text-muted-foreground" />,
+        icon: <SiContainerd size={50} className="text-secondary" />,
         badge: "Runtime",
         enterprise: true,
     },
     {
         name: "Podman",
         desc: "A container runtime interface for building and running rootless and secured containerized applications.",
-        icon: <SiPodman size={50} className="text-muted-foreground" />,
+        icon: <SiPodman size={50} className="text-secondary" />,
         badge: "Runtime",
     },
     {
       name: "Kubernetes",
       desc: "Container orchestration platform for automating, scaling, and managing microservices.",
-      icon: <SiKubernetes size={50} className="text-muted-foreground" />,
+      icon: <SiKubernetes size={50} className="text-secondary" />,
       badge: "Runtime",
       enterprise: true,
     },
     {
       name: "AWS",
       desc: "Templates and composable modules for creating a PaaS and downstream EKS Cluster on AWS.",
-      icon: <FaAws size={50} className="text-muted-foreground" />,
+      icon: <FaAws size={50} className="text-secondary" />,
       badge: "Template",
     },
     {
       name: "GCP",
       desc: "Templates and composable modules for creating a PaaS and downstream GKE Cluster on GCP.",
-      icon: <DiGoogleCloudPlatform size={50} className="text-muted-foreground" />,
+      icon: <DiGoogleCloudPlatform size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Azure",
       desc: "Templates and composable modules for creating a PaaS and downstream AKS Cluster on Azure.",
-      icon: <VscAzure size={50} className="text-muted-foreground" />,
+      icon: <VscAzure size={50} className="text-secondary" />,
       badge: "Runtime",
     },
     {
       name: "Ceph Storage",
       desc: "Composite module for deploying a unified cloud-native storage solution based on Ceph.",
-      icon: <SiCeph size={50} className="text-muted-foreground" />,
+      icon: <SiCeph size={50} className="text-secondary" />,
       badge: "Composition",
     },
     //{
     //  name: "Proxmox",
     //  desc: "Coming soon...",
-    //  icon: <SiProxmox size={50} className="text-muted-foreground" />,
+    //  icon: <SiProxmox size={50} className="text-secondary" />,
     //  badge: "Composition",
     //},
     //{
     //  name: "OCI",
     //  desc: "Oracle Cloud coming soon...",
-    //  icon: <SiOracle size={50} className="text-muted-foreground" />,
+    //  icon: <SiOracle size={50} className="text-secondary" />,
     //  badge: "Runtime",
     //},
     //{
     //  name: "DigitalOcean",
     //  desc: "Digital Ocean coming soon...",
-    //  icon: <FaDigitalOcean size={50} className="text-muted-foreground" />,
+    //  icon: <FaDigitalOcean size={50} className="text-secondary" />,
     //  badge: "Runtime",
     //},
     {
         name: "GitLab",
         desc: "A platform for hosting code sources, artifact repositories, and running complex DevSecOps workflows.",
-        icon: <FaGitlab size={50} className="text-muted-foreground" />,
+        icon: <FaGitlab size={50} className="text-secondary" />,
         badge: "Runtime",
         enterprise: true,
     },
     {
         name: "Harbor",
         desc: "A platform for hosting OCI compliant artifacts and Helm charts.",
-        icon: <SiHarbor size={50} className="text-muted-foreground" />,
+        icon: <SiHarbor size={50} className="text-secondary" />,
         badge: "Runtime",
         enterprise: true,
     },
@@ -341,9 +341,9 @@ export default function AppCatalog() {
   });
 
   return (
-    <div className="flex items-center justify-center bg-white text-primary-foreground px-4 py-6 md:px-4 md:py-16">
+    <div className="flex items-center justify-center bg-gray-100 text-primary-foreground px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
-        <H1 className="text-center">Why did we build App Catalog?</H1>
+        <H1 className="text-center text-primary mb-4">Why did we build App Catalog?</H1>
 
         {/* Tabs */}
         <div className="flex flex-wrap gap-2">
@@ -384,12 +384,12 @@ export default function AppCatalog() {
               </Badge1>
               <div className="text-3xl">{service.icon}</div>
               <div>
-                <PTop className="text-left text-white">{service.name}</PTop>
-                <P1 className="text-left text-muted-foreground mb-6 md:min-h-14">
+                <PTop className="text-left text-secondary font-bold">{service.name}</PTop>
+                <P1 className="text-left text-secondary mb-6 md:min-h-14">
                   {service.desc}
                 </P1>
                 {service.enterprise && (
-                  <P1 className="text-left text-sm text-muted-foreground flex items-center gap-2">
+                  <P1 className="text-left text-sm text-secondary flex items-center gap-2">
                     <span>Integrated in:</span> <img className="w-8 h-8" src="/favicon-60x60.png" />
                   </P1>
                 )}

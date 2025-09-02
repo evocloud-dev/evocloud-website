@@ -8,7 +8,7 @@ export default function EnableAI() {
     <div className="flex items-center flex-col md:flex-row gap-4">
       <div className="">
         <H1 className="text-primary mb-4">EvoCloud Architecture</H1>
-        <P1 className="text-muted-foreground">
+        <P1 className="text-secondary">
           EvoCloud provides a unified platform for managing infrastructure,
           pipelines, and deployments. This allows platform engineers to provide
           an internal developer platform that enables developers to focus on
@@ -20,7 +20,7 @@ export default function EnableAI() {
         width={640}
         height={650}
         alt="EvoCloud Multicloud"
-        className="bg-white"
+        className="bg-white border border-border shadow-md rounded-2xl"
       />
     </div>
   );
