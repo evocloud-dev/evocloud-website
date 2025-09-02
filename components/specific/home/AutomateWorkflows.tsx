@@ -11,11 +11,11 @@ export default function AutomateWorkflows() {
         width={640}
         height={650}
         alt="EvoCloud Automation"
-        className="bg-white"
+        className="bg-white border border-border shadow-md rounded-2xl"
       />
       <div className="">
         <H1 className="text-primary mb-4">Automation at its Core</H1>
-        <P1 className="text-muted-foreground">
+        <P1 className="text-secondary">
           Built around a robust automation and orchestration framework,
           EvoCloud makes it easier for platform engineers to build and
           scale within clear guardrails and security best practices.
