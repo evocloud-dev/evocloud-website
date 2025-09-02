@@ -341,7 +341,7 @@ export default function AppCatalog() {
   });
 
   return (
-    <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 py-6 md:px-4 md:py-16">
+    <div className="flex items-center justify-center bg-white text-primary-foreground px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
         <H1 className="text-center">Why did we build App Catalog?</H1>
 
