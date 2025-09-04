@@ -1,0 +1,305 @@
+"use client";
+
+import React, { useState } from "react";
+import H1 from "@/components/ui/headers/H1";
+import P1 from "@/components/ui/paragraphs/P1";
+import { FaCheckCircle } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa6";
+
+const plans = [
+  {
+    key: "lvl1",
+    title: "Level 1",
+    price: "Free",
+    recommended: "Testing",
+    support: "Guides & Community",
+  },
+  {
+    key: "lvl2",
+    title: "Level 2",
+    price: "$50/service/month",
+    recommended: "Growth & Staging",
+    support: "We will troubleshoot/fix your service directly",
+  },
+  {
+    key: "lvl3",
+    title: "Level 3",
+    price: "$200/service/month",
+    recommended: "Enterprise & Production",
+    support: "We will also help with custom configurations of the service",
+  },
+];
+
+const rows = [
+  { type: "header", label: "Features" },
+  {
+    type: "feature",
+    label: "Pricing",
+    values: ["Free", "$50/service/month", "$200/service/month"],
+  },
+  {
+    type: "feature",
+    label: "Recommended for",
+    values: ["Testing", "Growth & Staging", "Enterprise & Production"],
+  },
+  {
+    type: "feature",
+    label: "Service support",
+    values: [
+      "Guides & Community",
+      "We will troubleshoot/fix your service directly",
+      "We will also help with custom configurations of the service",
+    ],
+  },
+
+  // --------------------
+  { type: "section", label: "Resilience & Backups" },
+  {
+    type: "feature",
+    label: "Minimum uptime",
+    values: ["99.5%", "99.9%", "99.95%"],
+  },
+  {
+    type: "feature",
+    label: "Automated daily VM snapshots",
+    values: ["—", "2 daily snapshots", "4 daily snapshots"],
+  },
+  {
+    type: "feature",
+    label: "Automated remote backups (Borg)",
+    values: ["check", "check", "check"],
+  },
+  {
+    type: "feature",
+    label: "External backups (S3)",
+    values: ["check", "check", "check"],
+  },
+  {
+    type: "feature",
+    label: "Manual backups",
+    values: ["check", "check", "check"],
+  },
+  {
+    type: "feature",
+    label: "Dedicated VM per service",
+    values: ["check", "check", "check"],
+  },
+  {
+    type: "feature",
+    label: "Priority queuing",
+    values: ["check", "check", "check"],
+  },
+  {
+    type: "feature",
+    label: "Retention",
+    values: ["7 days retention", "14 days retention", "30 days retention"],
+  },
+
+  // --------------------
+  { type: "section", label: "Software & Infrastructure" },
+  {
+    type: "feature",
+    label: "Language/Framework support",
+    values: [
+      "Limited",
+      "Standard (Node, Python, PHP)",
+      "Extended (incl. Java, Go, Ruby)",
+    ],
+  },
+  {
+    type: "feature",
+    label: "Database options",
+    values: ["SQLite", "Postgres & MySQL", "Postgres, MySQL, Redis, MongoDB"],
+  },
+  {
+    type: "feature",
+    label: "Scalability",
+    values: [
+      "Single instance",
+      "Horizontal scaling (manual)",
+      "Auto-scaling clusters",
+    ],
+  },
+
+  // --------------------
+  { type: "section", label: "Deployment & Maintenance" },
+  {
+    type: "feature",
+    label: "CI/CD integration",
+    values: [
+      "Manual deploys only",
+      "GitHub/GitLab pipelines",
+      "Enterprise CI/CD with rollbacks",
+    ],
+  },
+  {
+    type: "feature",
+    label: "Zero-downtime deployments",
+    values: ["—", "Basic rolling updates", "Blue/Green + Canary deploys"],
+  },
+  {
+    type: "feature",
+    label: "Monitoring & alerts",
+    values: [
+      "Community docs",
+      "Basic alerts (email)",
+      "Advanced alerts (Slack, PagerDuty)",
+    ],
+  },
+
+  // --------------------
+  { type: "section", label: "Security" },
+  {
+    type: "feature",
+    label: "SSL/TLS certificates",
+    values: [
+      "Self-signed",
+      "Auto Let's Encrypt",
+      "Custom certs & managed rotation",
+    ],
+  },
+  {
+    type: "feature",
+    label: "Access control",
+    values: ["Single user only", "Basic team roles", "Advanced RBAC & SSO"],
+  },
+  {
+    type: "feature",
+    label: "Compliance",
+    values: ["—", "GDPR ready", "GDPR + HIPAA + SOC2"],
+  },
+];
+
+type Row =
+  | { type: "header"; label: string }
+  | { type: "section"; label: string }
+  | { type: "feature"; label: string; values: string[] };
+
+interface PricingTableProps {
+  rows: Row[];
+}
+
+export default function FlexiblePricing() {
+  // Grab all section labels
+  const sectionLabels: string[] = rows
+    .filter(
+      (r): r is { type: "section"; label: string } => r.type === "section"
+    )
+    .map((r) => r.label);
+
+  // Shape of state: Record<sectionLabel, boolean>
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>(
+    sectionLabels.reduce<Record<string, boolean>>((acc, label) => {
+      acc[label] = true; // all open by default
+      return acc;
+    }, {})
+  );
+
+  const toggleSection = (label: string) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
+  };
+  return (
+    <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 py-6 md:px-4 md:py-16">
+      <div className="max-w-screen-xl w-full mx-auto space-y-10">
+        <div className="">
+          <H1 className=" text-center mb-4">EvoCloud support plans</H1>
+
+          <P1 className="text-foreground text-center max-w-2xl mx-auto">
+            EvoCloud provides great support - you can choose a support plan
+            according to your needs, but for many use cases our Level 1 Support
+            plan will be all you need.
+          </P1>
+        </div>
+
+        <table className="min-w-[800px] w-full text-left bg-linear-to-b from-from to-to border border-border rounded-lg overflow-hidden">
+          <thead>
+            <tr>
+              <th className="py-4 px-4 text-lg font-semibold w-1/3 text-primary">
+                Features
+              </th>
+              {plans.map((p) => (
+                <th
+                  key={p.key}
+                  className="py-4 px-4 text-center text-lg font-semibold text-primary"
+                >
+                  {p.title}
+                </th>
+              ))}
+            </tr>
+          </thead>
+
+          <tbody className="[&>tr:not(:last-child)]:border-b [&>tr:not(:last-child)]:border-[var(--border)]">
+            {rows.map((row, i) => {
+              // SECTION ROW
+              if (row.type === "section") {
+                const isOpen = openSections[row.label];
+                return (
+                  <tr
+                    key={`section-${row.label}`}
+                    className="bg-[var(--muted)] cursor-pointer"
+                    onClick={() => toggleSection(row.label)}
+                  >
+                    <td
+                      className="py-3 px-4 text-[var(--foreground)] font-semibold"
+                      colSpan={plans.length + 1}
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        {isOpen ? (
+                          <FaChevronDown className="w-4 h-4" />
+                        ) : (
+                          <FaChevronRight className="w-4 h-4" />
+                        )}
+                        {row.label}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              }
+
+              // FEATURE ROW (only render if its section is open OR before any section)
+              const prevSection = [...rows.slice(0, i)]
+                .reverse()
+                .find((r) => r.type === "section");
+              const sectionLabel = prevSection?.label;
+              const isVisible = !sectionLabel || openSections[sectionLabel]; // if no section yet, always show
+
+              if (row.type === "feature" && isVisible) {
+                return (
+                  <tr
+                    key={`feature-${row.label}`}
+                    // className="bg-[var(--secondary)]"
+                  >
+                    <td className="py-3 px-4 text-[var(--secondary-foreground)]">
+                      {row.label}
+                    </td>
+                    {(row?.values || []).map((val, idx) => (
+                      <td
+                        key={`${row.label}-${idx}`}
+                        className="py-3 px-4 text-center"
+                      >
+                        {val === "check" ? (
+                          <span className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] text-[var(--accent-foreground)] w-6 h-6">
+                            <FaCheckCircle />
+                          </span>
+                        ) : (
+                          <span className="text-[var(--muted-foreground)]">
+                            {val}
+                          </span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              }
+
+              return null;
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}

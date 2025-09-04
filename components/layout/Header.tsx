@@ -6,6 +6,7 @@ import Link from "next/link";
 import SimpleLink from "@/components/ui/links/SimpleLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Button4 from "@/components/ui/buttons/cta/Button4";
+import { link } from "fs";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,10 +41,6 @@ export default function Header() {
         { title: "EvoCLoud vs VMware", href: "#" },
       ],
     },
-    // {
-    //   title: "Enterprise Support",
-    //   href: "#",
-    // },
     {
       title: "Community",
       href: "#",
@@ -53,8 +50,13 @@ export default function Header() {
       href: "/about",
     },
     {
-      title: "Developer",
-      href: "#",
+      title: "Pricing",
+      href: "/pricing",
+      links: [
+        { title: "Infrastructure Pricing", href: "/pricing/infrastructure-pricing" },
+        { title: "Application Pricing", href: "/pricing/application-pricing" },
+        { title: "Engineering Support", href: "/pricing/engineering-support" },
+      ]
     }
   ];
 
