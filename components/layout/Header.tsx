@@ -6,6 +6,7 @@ import Link from "next/link";
 import SimpleLink from "@/components/ui/links/SimpleLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Button4 from "@/components/ui/buttons/cta/Button4";
+import { link } from "fs";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,19 @@ export default function Header() {
     {
       title: "About",
       href: "/about",
-    }
+    },
+    {
+      title: "Pricing",
+      href: "/pricing",
+      links: [
+        {
+          title: "Infrastructure Pricing",
+          href: "/pricing/infrastructure-pricing",
+        },
+        { title: "Application Pricing", href: "/pricing/application-pricing" },
+        { title: "Engineering Support", href: "/pricing/engineering-support" },
+      ],
+    },
   ];
 
   return (
@@ -89,11 +102,7 @@ export default function Header() {
         >
           <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium md:p-4 md:p-0 mt-4 border rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-background">
             {links.map((link) => (
-              <SimpleLink
-                key={link.title}
-                href={link.href}
-                links={link.links}
-              >
+              <SimpleLink key={link.title} href={link.href} links={link.links}>
                 {link.title}
               </SimpleLink>
             ))}
