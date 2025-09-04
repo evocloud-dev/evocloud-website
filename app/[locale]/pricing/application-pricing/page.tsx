@@ -1,7 +1,7 @@
-import Hero from "@/components/specific/infrastructure-pricing/Hero";
-import Benefits from "@/components/specific/infrastructure-pricing/Benefits";
-import FlexiblePricing from "@/components/specific/infrastructure-pricing/FlexiblePricing";
-import StartFreeTrial from "@/components/specific/infrastructure-pricing/StartFreeTrial";
+import Hero from "@/components/specific/application-pricing/Hero";
+import Benefits from "@/components/specific/application-pricing/Benefits";
+import FlexiblePricing from "@/components/specific/application-pricing/FlexiblePricing";
+import StartFreeTrial from "@/components/specific/application-pricing/StartFreeTrial";
 
 export default function Pricing() {
   return (
