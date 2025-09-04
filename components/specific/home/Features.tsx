@@ -45,14 +45,15 @@ export default function Features() {
   };
 
   return (
-    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
+    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16 bg-gray-100">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
 
         <H1 className="text-primary mb-4">
-          Trusted By Industry Leaders
+          Solution and Ecosystem Partners
         </H1>
+        <span className="text-secondary text-center">Innovation doesn’t happen in a silo. There is no need to re-invente the wheel. We build and optimize innovative solutions for enterprise use cases.</span>
 
-        <Carousel
+        <Carousel className="bg-secondary"
           logos={[
             "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_clearitt.webp",
             "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_fator.webp",
@@ -72,19 +73,19 @@ export default function Features() {
 
         <Cards>
           <Card className="min-h-64">
-            <PTop>Deployment Time</PTop>
-            <PMid className="text-primary">40% ↓</PMid>
-            <PBottom> Reduce Deployment Time and Speed-up Time to Market </PBottom>
+            <PTop className="text-secondary font-bold">Deployment Time</PTop>
+            <PMid className="text-tertiary">40% ↓</PMid>
+            <PBottom className="text-secondary"> Reduce Deployment Time and Speed-up Time to Market </PBottom>
           </Card>
           <Card className="min-h-64">
-            <PTop>Cost Savings</PTop>
-            <PMid className="text-primary">63%</PMid>
-            <PBottom> Save on Cloud Cost and Engineering Cycles </PBottom>
+            <PTop className="text-secondary font-bold">Cost Savings</PTop>
+            <PMid className="text-tertiary">63%</PMid>
+            <PBottom className="text-secondary"> Save on Cloud Cost and Engineering Cycles </PBottom>
           </Card>
           <Card className="min-h-64">
-            <PTop>Multi-cloud Strategy</PTop>
-            <PMid className="text-primary">Multi-Cloud</PMid>
-            <PBottom> Risk Reduction and High Availability </PBottom>
+            <PTop className="text-secondary font-bold">Multi-cloud Strategy</PTop>
+            <PMid className="text-tertiary">Multi-Cloud</PMid>
+            <PBottom className="text-secondary"> Risk Reduction and High Availability </PBottom>
           </Card>
         </Cards>
 
@@ -116,7 +117,7 @@ export default function Features() {
             <P1 className="font-bold text-primary">
               DNS, PKI, Dogtag Infrastructure:{" "}
             </P1>
-            <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+            <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
               Deploy and manage Kubernetes anywhere (AWS, Azure, GCP, Vultr, or
               on any upstream-compatible Kubernetes infrastructure).
             </P1>
@@ -125,7 +126,7 @@ export default function Features() {
             <P1 className="font-bold text-primary">
               Multi-IaaS Kubernetes Platform:{" "}
             </P1>
-            <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+            <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
               Extend Kubernetes with fine-grained access controls,
               multi-environment support, and other capabilities–integrating over
               20+ CNCF projects under one control panel.
@@ -135,7 +136,7 @@ export default function Features() {
             <P1 className="font-bold text-primary">
               Multi-Cloud, On-Premise, and Edge:{" "}
             </P1>
-            <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+            <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
               Deploy and promote applications on Kubernetes clusters across
               multiple clouds and define continuous deployment pipelines.{" "}
             </P1>
@@ -147,7 +148,7 @@ export default function Features() {
                     <P1 className="font-bold text-primary">
                       Automated Workloads and GitOps Enabled:{" "}
                     </P1>
-                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                    <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
                       Deploy and manage Kubernetes anywhere (AWS, Azure, GCP, Vultr, or
                       on any upstream-compatible Kubernetes infrastructure).
                     </P1>
@@ -156,7 +157,7 @@ export default function Features() {
                     <P1 className="font-bold text-primary">
                       Composable Modules and Self-Service:{" "}
                     </P1>
-                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                    <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
                       Extend Kubernetes with fine-grained access controls,
                       multi-environment support, and other capabilities–integrating over
                       20+ CNCF projects under one control panel.
@@ -166,7 +167,7 @@ export default function Features() {
                     <P1 className="font-bold text-primary">
                       Open Source and Extensible:{" "}
                     </P1>
-                    <P1 className="text-lg font-normal text-muted-foreground tracking-[0.128px] leading-relaxed">
+                    <P1 className="text-lg font-normal text-secondary tracking-[0.128px] leading-relaxed">
                       Deploy and promote applications on Kubernetes clusters across
                       multiple clouds and define continuous deployment pipelines.{" "}
                     </P1>

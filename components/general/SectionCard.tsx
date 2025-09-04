@@ -11,7 +11,7 @@ export default function SectionCard({
   return (
     <div
       className={twMerge(
-        "flex justify-center items-center flex-col md:flex-row gap-4 p-8 md:p-12 bg-background rounded-2xl",
+        "flex justify-center items-center flex-col md:flex-row gap-4 p-8 md:p-12 bg-white border border-border shadow-md rounded-2xl",
         className
       )}
     >

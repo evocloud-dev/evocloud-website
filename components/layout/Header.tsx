@@ -42,6 +42,10 @@ export default function Header() {
       ],
     },
     {
+      title: "Enterprise Support",
+      href: "#",
+    },
+    {
       title: "Community",
       href: "#",
     },
@@ -53,11 +57,14 @@ export default function Header() {
       title: "Pricing",
       href: "/pricing",
       links: [
-        { title: "Infrastructure Pricing", href: "/pricing/infrastructure-pricing" },
+        {
+          title: "Infrastructure Pricing",
+          href: "/pricing/infrastructure-pricing",
+        },
         { title: "Application Pricing", href: "/pricing/application-pricing" },
         { title: "Engineering Support", href: "/pricing/engineering-support" },
-      ]
-    }
+      ],
+    },
   ];
 
   return (
@@ -95,11 +102,7 @@ export default function Header() {
         >
           <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium md:p-4 md:p-0 mt-4 border rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-background">
             {links.map((link) => (
-              <SimpleLink
-                key={link.title}
-                href={link.href}
-                links={link.links}
-              >
+              <SimpleLink key={link.title} href={link.href} links={link.links}>
                 {link.title}
               </SimpleLink>
             ))}

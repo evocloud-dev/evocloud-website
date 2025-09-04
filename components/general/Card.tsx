@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Card({className, children}: {className?: string, children: React.ReactNode}) {
   return (
-    <div className={twMerge("rounded-2xl text-left px-8 py-8 w-full border border-border shadow-md flex flex-col justify-between gap-4  bg-linear-to-b from-from to-to", className)}>
+    <div className={twMerge("rounded-2xl text-left px-8 py-8 w-full border border-border shadow-md flex flex-col justify-between gap-4 bg-white", className)}>
       {children}
     </div>
   );

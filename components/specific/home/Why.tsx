@@ -9,7 +9,7 @@ import P1 from "@/components/ui/paragraphs/P1";
 export default function Why() {
   return (
     <>
-      <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 py-6 md:px-4 md:py-16">
+      <div className="flex items-center justify-center bg-white px-4 py-6 md:py-16 text-primary-foreground">
         <div className="max-w-screen-xl w-full mx-auto space-y-10">
           <H1 className="text-center">Here’s What Our Customers Say</H1>
 
