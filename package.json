@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
+    "formik": "^2.4.6",
     "next": "15.4.5",
     "next-intl": "^4.3.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
-    "tailwind-merge": "^3.3.1"
+    "react-toastify": "^11.0.5",
+    "tailwind-merge": "^3.3.1",
+    "validator": "^13.15.15"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -23,6 +26,8 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-modal": "^3.16.3",
+    "@types/validator": "^13.15.3",
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4",
