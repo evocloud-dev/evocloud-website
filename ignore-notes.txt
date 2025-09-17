@@ -1,4 +1,9 @@
 # Changes
 
-- Changed Hero section height from full screen 100% width to 85%.
-- Add the nextl intl pcakage for translationso for en, fr
+- Close header link dropdown on click afer 100ms delay
+- Colored the active header link
+- Pricing is now Enterprise support
+- Comparison pages are done
+- Community Icons on header are done
+- Implemented Request a demo form
+- Added dependencies like formik, react-toastify, validator
