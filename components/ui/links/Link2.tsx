@@ -13,7 +13,7 @@ export default function Link2({
       href={href!}
       {...props}
       className={twMerge(
-        "text-sm text-foreground hover:text-primary hover:underline transition",
+        "text-sm text-black hover:text-primary hover:underline transition",
         className
       )}
     >

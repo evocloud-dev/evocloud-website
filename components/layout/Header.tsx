@@ -120,22 +120,19 @@ export default function Header() {
   };
 
   return (
-    <nav className="bg-background border-border">
+    <nav className="bg-gray-100 border-border">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-0 md:py-8">
         <Link
           href="/"
           className="flex items-center space-x-2 rtl:space-x-reverse"
         >
           <Image
-            src="/favicon-96x96.png"
-            // src="/images/logos/newfavicon-114x114.png"
-            width={32}
-            height={32}
+            //src="/favicon-96x96.png"
+            src="/images/logos/evocloud.svg"
+            width={190}
+            height={57}
             alt="EvoCloud Logo"
           />
-          <span className="self-center text-xl sm:text-2xl font-semibold whitespace-nowrap text-foreground">
-            EvoCloud
-          </span>
         </Link>
         <div className="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
           <Button4 onClick={requestADemoHandler}>Request A Demo</Button4>
@@ -152,7 +149,7 @@ export default function Header() {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-cta"
         >
-          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium md:p-4 md:p-0 mt-4 border rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-background">
+          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium text-primary md:p-4 md:p-0 mt-4 rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-gray-100">
             {links.map((link) => (
               <SimpleLink key={link.title} href={link.href} links={link.links}>
                 {link.title}

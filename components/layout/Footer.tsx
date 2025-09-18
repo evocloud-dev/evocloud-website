@@ -96,7 +96,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="px-4 py-6 md:px-4 md:py-16">
+      <footer className="px-4 py-6 md:px-4 md:py-16 bg-gray-100">
         <div className="max-w-screen-xl w-full mx-auto gap-4 sm:gap-x-6 sm:gap-y-12 flex flex-col-reverse sm:flex-row items-start">
           <div className="">
             <Card className="px-4 py-6 md:w-sm">
@@ -104,7 +104,7 @@ export default function Footer() {
 
               <Input1 placeholder="Enter your email address" />
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 text-black">
                 <CheckBox1 />
                 <Label1>I agree to the EvoCloud Data Privacy Policy.</Label1>
               </div>

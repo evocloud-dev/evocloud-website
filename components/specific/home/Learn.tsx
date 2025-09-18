@@ -9,14 +9,14 @@ import P1 from "@/components/ui/paragraphs/P1";
 
 export default function Learn() { 
   return (
-    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16">
+    <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16 bg-gray-100">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
-        <H1 className="text-foreground text-center">Learn More</H1>
+        <H1 className="text-primary-foreground text-center">Learn More</H1>
 
         <Cards className="lg:grid-cols-2">
           <Card className="min-h-80">
             <P1 className="text-primary">What is Platformless?</P1>
-            <P1 className="text-foreground text-sm mb-6 leading-relaxed tracking-wide">
+            <P1 className="text-black text-sm mb-6 leading-relaxed tracking-wide">
               Platformless allows enterprise developers to streamline their
               development process and focus on building apps that deliver value
               to users. This doesn’t mean platforms won’t exist. It just means
@@ -34,15 +34,15 @@ export default function Learn() {
               Reasons Why You Shouldn’t Build Your Own Platform
             </P1>
             <OL>
-              <li className="">Slows product launch</li>
-              <li className="">
+              <li className="text-black">Slows product launch</li>
+              <li className="text-black">
                 Requires significant effort to implement best practices
               </li>
-              <li className="">
+              <li className="text-black">
                 Involves complex technology and specialized skills
               </li>
-              <li className="">Demands a committed team</li>
-              <li className="">High costs and risks</li>
+              <li className="text-black">Demands a committed team</li>
+              <li className="text-black">High costs and risks</li>
             </OL>
 
             <div className="flex flex-wrap gap-4">
@@ -51,9 +51,9 @@ export default function Learn() {
           </Card>
         </Cards>
 
-        <H1 className="text-foreground text-center">Security and Compliance</H1>
+        <H1 className="text-primary-foreground text-center">Security and Compliance</H1>
 
-        <P1 className="text-foreground text-center max-w-3xl mx-auto">
+        <P1 className="text-black text-center max-w-3xl mx-auto">
           We leverage a minimalistic, cloud optimized, and immutable operating system with a small attack footprint to provide an environment for running hassle-free cloud-native applications. Besides, EvoCloud is built with data at rest and data in transit encryption. It also comes with a set of tools to enforce cluster wide security policies, manage RBAC and HBAC, collect security events, provide extended detection and response. See how EvoCloud is built with {" "}
           <Link href="#" className="underline">
             Security and Compliance
