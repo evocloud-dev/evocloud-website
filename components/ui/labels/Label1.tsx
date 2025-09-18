@@ -10,7 +10,7 @@ export default function Label1({
     <label
       {...props}
       className={twMerge(
-        "text-sm text-foreground",
+        "text-sm text-black",
         className
       )}
     >

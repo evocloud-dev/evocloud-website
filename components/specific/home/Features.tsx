@@ -48,26 +48,28 @@ export default function Features() {
     <div className="flex items-center justify-center px-4 py-6 md:px-4 md:py-16 bg-gray-100">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
 
-        <H1 className="text-primary mb-4">
+        <H1 className="text-primary-foreground mb-4">
           Solution and Ecosystem Partners
         </H1>
         <span className="text-secondary text-center">Innovation doesn’t happen in a silo. There is no need to re-invente the wheel. We build and optimize innovative solutions for enterprise use cases.</span>
 
-        <Carousel className="bg-secondary"
+        <Carousel className="bg-gray-100"
           logos={[
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_clearitt.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_fator.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_cutdry.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_linqura.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_ohio-state-university.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_bis.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_university-of-edinburgh.webp",
-            "https://wso2.cachefly.net/wso2/sites/all/image_resources/choreo/logo_zeomega.webp",
+            "https://github.com/cncf/artwork/blob/main/projects/flux/stacked/color/flux-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/operatorframework/stacked/color/operatorframework-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/helm/stacked/color/helm-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/kyverno/stacked/color/kyverno-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/kubernetes/stacked/color/kubernetes-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/opentofu/stacked/color/opentofu-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/dapr/stacked/color/dapr-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/karmada/stacked/color/karmada-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/cloudnativepg/stacked/color/cloudnativepg-stacked-color.svg",
+            "https://github.com/cncf/artwork/blob/main/projects/cilium/stacked/color/cilium_stacked-color.svg",
           ]}
           repeat={3}
         />
 
-        <H1 className="text-primary mb-10">
+        <H1 className="text-primary-foreground mb-10">
           Build your IT Infrastructure on EvoCloud
         </H1>
 
@@ -109,7 +111,7 @@ export default function Features() {
         {activeTab === "observe-and-govern" && <ObserveAndGovern />}
         {activeTab === "modern-apps" && <ModernApps />}
 
-        <H1 className="text-primary mb-10">
+        <H1 className="text-primary-foreground mb-10">
            Designed for Enterprise Use Cases
         </H1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">

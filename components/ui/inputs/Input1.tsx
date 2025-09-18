@@ -8,7 +8,7 @@ export default function Input1({
   return (
     <input
       className={twMerge(
-        "bg-input px-4 py-2 border border-border text-foreground text-sm rounded-md focus:ring-primary focus:border-primary block w-full",
+        "bg-gray-100 px-4 py-2 border border-border text-black text-sm rounded-md focus:ring-primary focus:border-primary block w-full",
         className
       )}
       {...props}

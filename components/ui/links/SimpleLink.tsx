@@ -46,7 +46,7 @@ export default function SimpleLink({
     <div ref={ref} className={twMerge("relative", className)}>
       <span
         onClick={() => setIsOpen((prev) => !prev)}
-        className="inline-flex flex-col items-stretch md:flex-row md:items-center gap-2 justify-between py-2 px-3 md:p-0 text-foreground rounded-sm md:bg-transparent cursor-pointer hover:text-primary"
+        className="inline-flex flex-col items-stretch md:flex-row md:items-center gap-2 justify-between py-2 px-3 md:p-0 text-black rounded-sm md:bg-transparent cursor-pointer hover:text-primary"
       >
         <span
           className={`flex items-center justify-between gap-2 ${
@@ -60,8 +60,8 @@ export default function SimpleLink({
       </span>
 
       {isOpen && (
-        <div className="md:absolute md:top-[115%] md:left-1/2 md:-translate-x-1/2 bg-background z-50 font-normal divide-y divide-border rounded-lg shadow-sm shadow-primary/50 md:w-48">
-          <ul className="py-2 text-sm text-muted-foreground divide-y-2 divide-border">
+        <div className="md:absolute md:top-[115%] md:left-1/2 md:-translate-x-1/2 bg-white z-50 font-normal divide-y rounded-lg shadow-sm shadow-primary/50 md:w-48">
+          <ul className="py-2 text-sm text-muted-foreground divide-y-2">
             {links?.map((link) => (
               <li key={link.title} className="w-full">
                 <Link2
@@ -91,7 +91,7 @@ export default function SimpleLink({
       href={href!}
       {...props}
       className={twMerge(
-        "inline-flex items-center gap-2 justify-between py-2 px-3 md:p-0 text-foreground hover:text-primary rounded-sm md:bg-transparent",
+        "inline-flex items-center gap-2 justify-between py-2 px-3 md:p-0 text-black hover:text-primary rounded-sm md:bg-transparent",
         `${pathname?.endsWith(href!) && "text-primary"}`,
         className
       )}
