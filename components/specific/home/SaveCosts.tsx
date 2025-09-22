@@ -18,7 +18,7 @@ export default function SaveCosts() {
         </P1>
       </div>
       <Image
-        src="/images/card-cilium.webp"
+        src="/images/evocloud-cost.webp"
         width={640}
         height={650}
         alt="EvoCloud Multicloud"

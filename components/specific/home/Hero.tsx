@@ -5,7 +5,6 @@ import H2 from "@/components/ui/headers/H2";
 import H3 from "@/components/ui/headers/H3";
 import Button1 from "@/components/ui/buttons/cta/Button1";
 import Button2 from "@/components/ui/buttons/cta/Button2";
-import { FaShield } from "react-icons/fa6";
 import { IoLogoMicrosoft } from "react-icons/io5";
 import { FaAws } from "react-icons/fa";
 import { SiGooglecloud } from "react-icons/si";
