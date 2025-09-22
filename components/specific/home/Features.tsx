@@ -55,7 +55,7 @@ export default function Features() {
 
         <Carousel className="bg-gray-100"
           logos={[
-            "https://github.com/cncf/artwork/blob/main/projects/flux/stacked/color/flux-stacked-color.svg",
+            "https://raw.githubusercontent.com/cncf/artwork/5ec97e4b653342ec2d1e4dd9aaf015c27431591c/projects/flux/stacked/color/flux-stacked-color.svg",
             "https://github.com/cncf/artwork/blob/main/projects/operatorframework/stacked/color/operatorframework-stacked-color.svg",
             "https://github.com/cncf/artwork/blob/main/projects/helm/stacked/color/helm-stacked-color.svg",
             "https://github.com/cncf/artwork/blob/main/projects/kyverno/stacked/color/kyverno-stacked-color.svg",

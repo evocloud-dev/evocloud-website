@@ -7,3 +7,81 @@
 - Community Icons on header are done
 - Implemented Request a demo form
 - Added dependencies like formik, react-toastify, validator
+
+
+// Demo data — replace with your real CMS/content layer
+// const allPosts = [
+//   {
+//     id: "1",
+//     title: "Design Systems that Scale: A Practical Guide",
+//     excerpt:
+//       "How to build and maintain design systems that empower teams without slowing them down.",
+//     tags: ["Design", "Systems"],
+//     author: "John Doe",
+//     date: "2025-08-15",
+//     readingTime: "8 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop",
+//     featured: true,
+//   },
+//   {
+//     id: "2",
+//     title: "Edge Rendering in Next.js: Patterns & Pitfalls",
+//     excerpt:
+//       "Understand where the edge shines, how to avoid cold starts, and when to fall back to Node.",
+//     tags: ["Next.js", "Performance"],
+//     author: "John Doe",
+//     date: "2025-07-28",
+//     readingTime: "6 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1542831371-d531d36971e6?q=80&w=1200&auto=format&fit=crop",
+//   },
+//   {
+//     id: "3",
+//     title: "Advanced Tailwind v4 Recipes with CSS Variables",
+//     excerpt:
+//       "Leverage semantic tokens and CSS variables to unlock powerful theming patterns.",
+//     tags: ["Tailwind", "CSS"],
+//     author: "John Doe",
+//     date: "2025-06-30",
+//     readingTime: "9 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+//   },
+//   {
+//     id: "4",
+//     title: "From Monolith to Modular: Gradual Refactors that Stick",
+//     excerpt:
+//       "A step-by-step approach to breaking apart legacy apps without stopping the world.",
+//     tags: ["Architecture", "Refactoring"],
+//     author: "John Doe",
+//     date: "2025-05-12",
+//     readingTime: "7 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
+//   },
+//   {
+//     id: "5",
+//     title: "Runtime Observability: Dashboards that Developers Actually Use",
+//     excerpt:
+//       "Design telemetry views that reduce alert fatigue and speed up incident response.",
+//     tags: ["Observability", "DevOps"],
+//     author: "John Doe",
+//     date: "2025-04-19",
+//     readingTime: "10 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200&auto=format&fit=crop",
+//   },
+//   {
+//     id: "6",
+//     title: "Content Modeling 101: Future-Proof Your Blog",
+//     excerpt:
+//       "Shape content types and relationships so redesigns and migrations are painless.",
+//     tags: ["Content", "CMS"],
+//     author: "John Doe",
+//     date: "2025-03-05",
+//     readingTime: "5 min",
+//     cover:
+//       "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
