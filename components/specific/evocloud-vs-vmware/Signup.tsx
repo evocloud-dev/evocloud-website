@@ -11,7 +11,7 @@ export default function Signup() {
           <H1 className="text-center">Schedule a Demo. Learn more about our Enterprise Support</H1>
           <div className="flex justify-center flex-wrap gap-2 sm:gap-4">
             <Button1 className="">
-              Book a Demo
+              Schedule a Demo
             </Button1>
 
             <Button2 className="">

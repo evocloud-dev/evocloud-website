@@ -1,7 +1,7 @@
 import Hero from "@/components/specific/application-pricing/Hero";
 import Benefits from "@/components/specific/application-pricing/Benefits";
 import FlexiblePricing from "@/components/specific/application-pricing/FlexiblePricing";
-import StartFreeTrial from "@/components/specific/application-pricing/StartFreeTrial";
+import Signup from "@/components/specific/application-pricing/Signup";
 
 export default function Pricing() {
   return (
@@ -9,7 +9,7 @@ export default function Pricing() {
       <Hero />
       <Benefits />
       <FlexiblePricing />
-      <StartFreeTrial />
+      <Signup />
     </div>
   );
 }

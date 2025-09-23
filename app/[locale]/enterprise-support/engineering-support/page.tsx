@@ -1,7 +1,7 @@
 import Hero from "@/components/specific/engineering-support/Hero";
 import Benefits from "@/components/specific/engineering-support/Benefits";
 import PricingComparison from "@/components/specific/engineering-support/PricingComparison";
-import StartFreeTrial from "@/components/specific/engineering-support/StartFreeTrial";
+import Signup from "@/components/specific/engineering-support/Signup";
 
 export default function Pricing() {
   return (
@@ -9,7 +9,7 @@ export default function Pricing() {
       <Hero />
       <Benefits />
       <PricingComparison />
-      <StartFreeTrial />
+      <Signup />
     </div>
   );
 }

@@ -9,6 +9,13 @@ export default function Hero() {
   return (
     <>
       <section className="relative h-max md:h-[75vh] px-4 py-6 md:py-16 flex items-center justify-center bg-white text-primary-foreground">
+        <Image
+          src="/images/evocloud-rancher.webp"
+          width={640}
+          height={650}
+          alt="EvoCloud Features"
+          className=""
+        />
         <div className="max-w-screen-xl w-full mx-auto space-y-10">
           <H1 className="mb-10">
             EvoCloud vs Rancher
@@ -26,13 +33,6 @@ export default function Hero() {
             </Button2>
           </div>
         </div>
-        <Image
-          src="/images/evocloud-layer.webp"
-          width={640}
-          height={650}
-          alt="EvoCloud Features"
-          className=""
-        />
       </section>
     </>
   );
