@@ -38,7 +38,8 @@ export default function Header() {
       title: "Resources",
       links: [
         { title: "Documentation", href: "/documentation" },
-        { title: "Blog & Tutorials", href: "#" },
+        { title: "Blog & Tutorials", href: "/blog" },
+        { title: "Tutorials", href: "#" },
         { title: "Training Courses", href: "#" },
         { title: "Certifications", href: "#" },
       ],
@@ -149,7 +150,7 @@ export default function Header() {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-cta"
         >
-          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium text-primary md:p-4 md:p-0 mt-4 rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-gray-100">
+          <ul className="flex flex-col w-full items-stretch gap-y-2 font-medium text-primary md:p-0 mt-4 rounded-lg bg-muted border-border md:space-x-8 rtl:space-x-reverse md:w-auto md:flex-row md:items-start md:mt-0 md:border-0 md:bg-gray-100">
             {links.map((link) => (
               <SimpleLink key={link.title} href={link.href} links={link.links}>
                 {link.title}
