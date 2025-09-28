@@ -180,28 +180,27 @@ export default function Compare() {
     }));
   };
   return (
-    <div className="flex items-center justify-center bg-linear-to-b from-accent to-primary px-4 py-6 md:px-4 md:py-16">
+    <div className="flex items-center justify-center bg-gray-100 text-primary-foreground px-4 py-6 md:px-4 md:py-16">
       <div className="max-w-screen-xl w-full mx-auto space-y-10">
         <div className="">
-          <H1 className=" text-center mb-4">EvoCloud vs Rancher</H1>
-
-          <P1 className="text-foreground text-center max-w-2xl mx-auto">
+          <H1 className=" text-center text-primary mb-4">EvoCloud vs Rancher</H1>
+          <P1 className="text-black text-center max-w-2xl mx-auto">
             EvoCloud provides great support - you can choose a support plan
             according to your needs, but for many use cases our Level 1 Support
             plan will be all you need.
           </P1>
         </div>
 
-        <table className="min-w-[800px] w-full text-left bg-linear-to-b from-from to-to border border-border rounded-lg overflow-hidden">
+        <table className="min-w-[800px] w-full text-left bg-white border-border rounded-lg overflow-hidden shadow-sm shadow-primary/50">
           <thead>
             <tr>
-              <th className="py-4 px-4 text-lg font-semibold w-1/3 text-primary">
+              <th className="py-4 px-4 text-lg font-semibold w-1/3 text-tertiary">
                 Features
               </th>
               {plans.map((p) => (
                 <th
                   key={p.key}
-                  className="py-4 px-4 text-center text-lg font-semibold text-primary"
+                  className="py-4 px-4 text-center text-lg font-semibold text-tertiary"
                 >
                   {p.title}
                 </th>
@@ -217,7 +216,7 @@ export default function Compare() {
                 return (
                   <tr
                     key={`section-${row.label}`}
-                    className="bg-[var(--muted)] cursor-pointer"
+                    className="bg-primary cursor-pointer"
                     onClick={() => toggleSection(row.label)}
                   >
                     <td
@@ -250,7 +249,7 @@ export default function Compare() {
                     key={`feature-${row.label}`}
                     // className="bg-[var(--secondary)]"
                   >
-                    <td className="py-3 px-4 text-[var(--secondary-foreground)]">
+                    <td className="py-3 px-4 text-black">
                       {row.label}
                     </td>
                     {(row?.values || []).map((val, idx) => (
@@ -259,11 +258,11 @@ export default function Compare() {
                         className="py-3 px-4 text-center"
                       >
                         {val === "check" ? (
-                          <span className="inline-flex items-center justify-center rounded-full bg-[var(--accent)] text-[var(--accent-foreground)] w-6 h-6">
+                          <span className="inline-flex items-center justify-center rounded-full bg-tertiary text-[var(--accent-foreground)] w-6 h-6">
                             <FaCheckCircle />
                           </span>
                         ) : (
-                          <span className="text-[var(--muted-foreground)]">
+                          <span className="text-black">
                             {val}
                           </span>
                         )}
