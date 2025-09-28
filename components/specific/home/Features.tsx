@@ -86,6 +86,7 @@ export default function Features() {
             "https://raw.githubusercontent.com/cncf/landscape/b63a614594d400f58a49d25a79eba24db98709a3/hosted_logos/ceph.svg",
             "https://raw.githubusercontent.com/cncf/landscape/b63a614594d400f58a49d25a79eba24db98709a3/hosted_logos/clickhouse.svg",
             "https://raw.githubusercontent.com/cncf/landscape/b63a614594d400f58a49d25a79eba24db98709a3/hosted_logos/ha-proxy-technologies-member.svg",
+            "https://raw.githubusercontent.com/cncf/artwork/3e6dbd6b9f3fd3b03e848c10a9921ccc5b5dabf7/projects/capsule/stacked/color/capsule-stacked-color.svg",
           ]}
           repeat={3}
         />
