@@ -16,9 +16,9 @@ export default function ModernApps() {
         </P1>
       </div>
       <Image
-        src="/images/evocloud-platform-plus.webp"
+        src="/images/evocloud-platform-plus.svg"
         width={640}
-        height={650}
+        height={480}
         alt="EvoCloud Platform Plus"
         className="bg-white border border-border shadow-md rounded-2xl"
       />

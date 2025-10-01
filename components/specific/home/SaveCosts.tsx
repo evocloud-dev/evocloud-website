@@ -18,9 +18,9 @@ export default function SaveCosts() {
         </P1>
       </div>
       <Image
-        src="/images/evocloud-cost.webp"
+        src="/images/evocloud-cost.svg"
         width={640}
-        height={650}
+        height={480}
         alt="EvoCloud Multicloud"
         className="bg-white border border-border shadow-md rounded-2xl"
       />

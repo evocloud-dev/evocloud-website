@@ -13,7 +13,8 @@ export default function Hero() {
   return (
     <>
       <section className="relative h-max md:h-[75vh] px-4 py-6 md:py-16 flex items-center justify-center bg-white text-primary-foreground">
-        <div className="max-w-screen-xl w-full mx-auto space-y-10">
+        <div className="md:max-w-screen-xl z-10">
+          <div className="md:max-w-[60%]">
             <H1 className="mb-10">
               EvoCloud Application Catalog
             </H1>
@@ -37,15 +38,15 @@ export default function Hero() {
                 Enterprise Support
               </Button2>
             </div>
-
+          </div>
+          <Image
+            src="/images/evocloud-layer.webp"
+            width={640}
+            height={650}
+            alt="EvoCloud Features"
+            className="absolute top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block"
+          />
         </div>
-        <Image
-           src="/images/evocloud-layer.webp"
-           width={640}
-           height={650}
-           alt="EvoCloud Features"
-           className=""
-        />
       </section>
     </>
   );

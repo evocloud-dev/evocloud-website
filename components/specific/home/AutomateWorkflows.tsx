@@ -7,9 +7,10 @@ export default function AutomateWorkflows() {
   return (
     <div className="flex items-center flex-col md:flex-row gap-4">
       <Image
-        src="/images/evocloud-automation.webp"
+        src="/images/evocloud-automation.svg"
         width={640}
-        height={650}
+        height={480}
+        priority
         alt="EvoCloud Automation"
         className="bg-white border border-border shadow-md rounded-2xl"
       />

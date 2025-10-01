@@ -8,21 +8,16 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      <section className="relative h-max md:h-[75vh] px-4 py-6 md:py-16 flex items-center justify-center bg-white text-primary-foreground">
-        <Image
-          src="/images/evocloud-openshift.webp"
-          width={640}
-          height={650}
-          alt="EvoCloud Features"
-          className=""
-        />
-        <div className="max-w-screen-xl w-full mx-auto space-y-10">
+      <section className="relative h-max md:h-[45vh] px-4 py-6 md:py-16 flex items-center justify-center bg-white text-primary-foreground">
+        <div className="md:max-w-screen-xl z-10">
+          <div className="md:max-w-[60%]">
             <H1 className="mb-10">
               EvoCloud vs OpenShift
             </H1>
 
             <H2 className="mb-4">
-              EvoCloud aims to provide an open-source alternative to OpenShift, with built-in composable components, runtimes, and orchestrators.
+              EvoCloud aims to provide an open-source alternative to OpenShift,
+              with built-in composable components, runtimes, and orchestrators.
             </H2>
 
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-10">
@@ -33,6 +28,14 @@ export default function Hero() {
                  Enterprise Support
               </Button2>
             </div>
+          </div>
+          <Image
+            src="/images/evocloud-openshift.svg"
+            width={640}
+            height={480}
+            alt="EvoCloud-and-OpenShift"
+            className="absolute top-1/2 left-[75%] -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden md:block"
+          />
         </div>
       </section>
     </>
