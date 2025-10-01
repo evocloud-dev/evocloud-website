@@ -16,9 +16,9 @@ export default function EnableAI() {
         </P1>
       </div>
       <Image
-        src="/images/evocloud-architecture.webp"
+        src="/images/evocloud-architecture.svg"
         width={640}
-        height={650}
+        height={480}
         alt="EvoCloud Multicloud"
         className="bg-white border border-border shadow-md rounded-2xl"
       />

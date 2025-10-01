@@ -7,9 +7,9 @@ export default function SimplifyInfrastructure() {
   return (
     <div className="flex items-center flex-col md:flex-row gap-4">
       <Image
-        src="/images/evocloud-multicloud.webp"
+        src="/images/evocloud-multicloud.svg"
         width={640}
-        height={650}
+        height={480}
         alt="EvoCloud Multicloud"
         className="bg-white border border-border shadow-md rounded-2xl"
       />
