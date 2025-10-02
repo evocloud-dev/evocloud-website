@@ -79,8 +79,12 @@
 
 /* Base styles */
 body {
-  background-color: var(--background);
+  /* background-color: var(--background); */
   font-family: var(--font-poppins, system-ui, sans-serif);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes scroll {
