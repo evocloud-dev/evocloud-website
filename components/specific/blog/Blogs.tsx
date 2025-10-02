@@ -227,23 +227,23 @@ export default function Blogs({
               Trending
             </div>
             <ul className="divide-y divide-border/60">
-              {pageData.slice(0, 7).map((p) => (
-                <li key={p.id} className="flex items-start gap-3 px-4 py-3">
+              {pageData.slice(0, 7).map((post) => (
+                <li key={post.id} className="flex items-start gap-3 px-4 py-3">
                   <img
-                    src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${p?.cover?.url}`}
+                    src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${post?.cover?.url}`}
                     alt=""
                     className="h-12 w-16 rounded-md object-cover"
                   />
                   <div className="min-w-0">
-                    <a
-                      href={`#/post/${p.id}`}
+                    <Link
+                      href={`/blog/${post.documentId}`}
                       className="line-clamp-2 text-sm font-medium hover:underline text-background"
                     >
-                      {p.title}
-                    </a>
+                      {post.title}
+                    </Link>
                     <p className="mt-0.5 text-xs text-muted">
-                      {p.readingTime} •{" "}
-                      {new Date(p.createdAt).toLocaleDateString()}
+                      {post.readingTime} min •{" "}
+                      {new Date(post.createdAt).toLocaleDateString()}
                     </p>
                   </div>
                 </li>

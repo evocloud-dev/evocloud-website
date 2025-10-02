@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import SimpleLink from "@/components/ui/links/SimpleLink";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Button4 from "@/components/ui/buttons/cta/Button4";
@@ -16,10 +17,13 @@ import {
   REQUEST_A_DEMO_PARAM_VALUE,
 } from "@/lib/constants/ui";
 import useSetQueryParam from "@/hooks/routing/useSetQueryParam";
+import { useUIStore } from "@/providers/ui-store-provider";
 
 export default function Header() {
   const { setQueryParam } = useSetQueryParam();
   const [isOpen, setIsOpen] = useState(false);
+
+  const { heroInView } = useUIStore((state) => state);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -39,7 +43,6 @@ export default function Header() {
       links: [
         { title: "Documentation", href: "/documentation" },
         { title: "Blog & Tutorials", href: "/blog" },
-        { title: "Tutorials", href: "#" },
         { title: "Training Courses", href: "#" },
         { title: "Certifications", href: "#" },
       ],
@@ -121,20 +124,26 @@ export default function Header() {
   };
 
   return (
-    <nav className="bg-gray-100 border-border">
+    <nav
+      className={`bg-gray-100 border-border top-0 z-50 transition-all duration-300 ${
+        heroInView ? "relative" : "sticky shadow-md"
+      }`}
+    >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:px-0 md:py-8">
+        {/* Logo */}
         <Link
           href="/"
           className="flex items-center space-x-2 rtl:space-x-reverse"
         >
           <Image
-            //src="/favicon-96x96.png"
             src="/images/logos/evocloud.svg"
             width={190}
             height={57}
             alt="EvoCloud Logo"
           />
         </Link>
+
+        {/* Actions */}
         <div className="flex md:order-2 space-x-2 md:space-x-0 rtl:space-x-reverse">
           <Button4 onClick={requestADemoHandler}>Request A Demo</Button4>
           <button
@@ -144,6 +153,8 @@ export default function Header() {
             <GiHamburgerMenu className="text-2xl" />
           </button>
         </div>
+
+        {/* Menu Links */}
         <div
           className={`items-center justify-between ${
             isOpen ? "flex" : "hidden"

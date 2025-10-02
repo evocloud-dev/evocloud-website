@@ -1,13 +1,11 @@
 # Changes
 
-- Close header link dropdown on click afer 100ms delay
-- Colored the active header link
-- Pricing is now Enterprise support
-- Comparison pages are done
-- Community Icons on header are done
-- Implemented Request a demo form
-- Added dependencies like formik, react-toastify, validator
-
+- Slight touch up to some hero sections
+- General 404 page
+- General error page
+- sticky navbar (using zustand, react-intersection-observer)
+- sticky TOC on single Blog page
+- Updated html markdown renderer components list
 
 // Demo data — replace with your real CMS/content layer
 // const allPosts = [

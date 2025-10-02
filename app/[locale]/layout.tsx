@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import RequestADemo from "@/components/layout/RequestADemo";
-import { ToastContainer } from 'react-toastify';
+import { UIStoreProvider } from "@/providers/ui-store-provider";
+import { ToastContainer } from "react-toastify";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
@@ -40,20 +41,23 @@ export default async function RootLayout({
 }>) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
+    console.log("not found");
     notFound();
   }
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
       >
         <NextIntlClientProvider>
-          <Header />
-          <ToastContainer />
-          <RequestADemo/>
-          {children}
-          <Footer />
+          <UIStoreProvider>
+            <Header />
+            <ToastContainer />
+            <RequestADemo />
+            {children}
+            <Footer />
+          </UIStoreProvider>
         </NextIntlClientProvider>
       </body>
     </html>
