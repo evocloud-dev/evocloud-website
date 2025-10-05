@@ -1,23 +1,12 @@
 // app/post/[id]/page.jsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  FiClock,
-  FiTag,
-  FiChevronLeft,
-  FiShare2,
-  FiArrowUpRight,
-} from "react-icons/fi";
-import { motion } from "framer-motion";
+import { FiClock, FiTag, FiChevronLeft, FiShare2 } from "react-icons/fi";
 import { ArticleResponse, ArticlesResponse } from "@/types/strapi";
 import { MAX_RELATED_ARTICLES } from "@/lib/constants/ui";
+import MarkdownRenderer from "@/components/general/MarkdownRenderer";
+import TableOfContents from "@/components/general/TableOfContents";
 import axios from "axios";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import type { ComponentProps } from "react";
 
 // Format "2025-09-01" -> "Sep 1, 2025"
 function formatDate(iso) {
@@ -143,7 +132,7 @@ export default async function Page({
         <div className="mx-auto max-w-5xl px-4 pt-10 md:pt-14">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
           >
             <FiChevronLeft className="h-4 w-4" /> Back to all articles
           </Link>
@@ -151,10 +140,6 @@ export default async function Page({
           <h1 className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
             {article.title}
           </h1>
-          {/* <motion.h1 initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mt-4 text-3xl font-bold tracking-tight md:text-5xl">
-            {article.title}
-          </motion.h1> */}
-
           <p className="mt-3 max-w-3xl text-[--muted]">{article.excerpt}</p>
 
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -202,43 +187,26 @@ export default async function Page({
                 className="h-[360px] w-full object-cover md:h-[480px]"
               />
             </div>
-            {/* <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4 }} className="overflow-hidden rounded-2xl border border-border/40">
-              <img src={coverUrl} alt="" className="h-[360px] w-full object-cover md:h-[480px]" />
-            </motion.div> */}
           </div>
         )}
       </section>
 
-      {/* Body + Sidebar */}
-      <main className="mx-auto grid max-w-5xl gap-8 px-4 py-10 md:grid-cols-[1fr,320px]">
-        {/* Article */}
-        <article className="prose prose-invert max-w-none prose-h2:scroll-mt-24 prose-h3:scroll-mt-24">
-          {/* Share row */}
-          <div className="mb-6 flex items-center justify-between rounded-xl border border-border/60 bg-[--secondary] p-3 text-sm text-[--secondary-foreground]">
-            <span>Enjoying this read? Share it.</span>
-            <div className="flex items-center gap-2">
-              <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-                  article.title
-                )}&url=${encodeURIComponent(
-                  typeof window !== "undefined" ? window.location.href : ""
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 rounded-lg border border-border/60 px-3 py-1.5 hover:bg-[--accent] hover:text-[--accent-foreground]"
-              >
-                <FiShare2 className="h-4 w-4" /> Share
-              </a>
-            </div>
+      <main className="mx-auto grid max-w-5xl gap-2 px-4 py-10 md:grid-cols-[minmax(160px,220px)_1fr] md:items-start">
+        {/* Table of Contents (left column on md+, hidden on mobile) */}
+        <aside className="hidden md:block sticky top-2 self-start h-fit">
+          <div className="max-h-[calc(100vh-6rem)] overflow-auto pr-4">
+            <TableOfContents />
           </div>
+        </aside>
 
-          {/* Content: expecting HTML from Strapi; if markdown, render it there and store as HTML */}
+        {/* Article (right column) */}
+        <article className="min-w-0 prose prose-invert max-w-none prose-h2:scroll-mt-24 prose-h3:scroll-mt-24">
+          {/* Content */}
           {article.content ? (
             <div className="prose prose-invert max-w-none">
               <MarkdownRenderer content={article.content} />
             </div>
           ) : (
-            // <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: article.content }} />
             <p className="text-[--muted]">
               No content available for this article.
             </p>
@@ -258,12 +226,9 @@ export default async function Page({
               <FiChevronLeft className="h-4 w-4" /> Back to articles
             </Link>
           </div>
-        </article>
 
-        {/* Sidebar */}
-        <aside className="space-y-6">
           {/* Related */}
-          <div className="overflow-hidden rounded-2xl border border-border/70 bg-foreground text-background">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-border/70 bg-foreground text-background">
             <div className="border-b border-border/60 bg-primary px-4 py-3 text-sm font-semibold text-white">
               Related articles
             </div>
@@ -300,7 +265,7 @@ export default async function Page({
               </div>
             )}
           </div>
-        </aside>
+        </article>
       </main>
 
       {/* More from the blog */}
@@ -308,98 +273,29 @@ export default async function Page({
         {related.length > 0 && (
           <>
             <h2 className="mb-4 text-xl font-semibold">Keep reading</h2>
-            {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-              {related.map((post, i) => (
-                <motion.article key={post.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: i * 0.03 }} className="group overflow-hidden rounded-2xl border border-border/40 bg-[--background-gray-light] text-foreground">
-                  <div className="relative h-40 w-full overflow-hidden">
-                    {post?.cover?.url ? (
-                      <img src={`${API_URL}${post.cover.url}`} alt="" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    ) : (
-                      <div className="h-full w-full bg-[--secondary]"></div>
-                    )}
-                  </div>
-                  <div className="space-y-2 p-4">
-                    <div className="flex flex-wrap gap-2">{(post.tags || []).slice(0, 3).map((t) => <span key={t} className="rounded-full bg-gray-200 px-3 py-1 text-xs font-medium text-gray-800">{t}</span>)}</div>
-                    <h3 className="text-lg font-semibold leading-snug text-gray-900">{post.title}</h3>
-                    <p className="line-clamp-2 text-sm text-muted-foreground">{post.excerpt}</p>
-                    <div className="flex items-center justify-between pt-1 text-xs text-muted-foreground">
-                      <span>{formatDate(post.createdAt)}</span>
-                      <span className="inline-flex items-center gap-1"><FiClock className="h-3.5 w-3.5" /> {post.readingTime}</span>
-                    </div>
-                    <Link href={`/post/${post.id}`} className="mt-1 inline-flex items-center gap-1 text-sm text-accent hover:underline">Read article <FiArrowUpRight className="h-4 w-4" /></Link>
-                  </div>
-                </motion.article>
-              ))}
-            </div> */}
+            {/* grid of related posts if you re-enable */}
           </>
         )}
+
+        {/* Share row */}
+        <div className="mb-6 flex items-center justify-between rounded-xl border border-border/60 bg-[--secondary] p-3 text-sm text-[--secondary-foreground]">
+          <span>Enjoying this read? Share it.</span>
+          <div className="flex items-center gap-2">
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                article.title
+              )}&url=${encodeURIComponent(
+                typeof window !== "undefined" ? window.location.href : ""
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 rounded-lg border border-border/60 px-3 py-1.5 hover:bg-[--accent] hover:text-[--accent-foreground]"
+            >
+              <FiShare2 className="h-4 w-4" /> Share
+            </a>
+          </div>
+        </div>
       </section>
     </div>
-  );
-}
-
-type MarkdownRendererProps = {
-  content: string;
-};
-
-type CodeProps = ComponentProps<"code"> & {
-  inline?: boolean;
-  node?: any;
-};
-
-export function MarkdownRenderer({ content }: MarkdownRendererProps) {
-  return (
-    <ReactMarkdown
-      remarkPlugins={[remarkGfm]}
-      rehypePlugins={[rehypeRaw]}
-      components={{
-        code({ inline, className, children, ...props }: CodeProps) {
-          const match = /language-(\w+)/.exec(className || "");
-          return !inline && match ? (
-            <SyntaxHighlighter
-              // @ts-expect-error Type 'Record<string, string>' is not assignable to type 'Record<string, React.CSSProperties>'.
-              style={oneDark as Record<string, React.CSSProperties>}
-              language={match[1]}
-              PreTag="div"
-              {...props}
-            >
-              {String(children).replace(/\n$/, "")}
-            </SyntaxHighlighter>
-          ) : (
-            <code className={className} {...props}>
-              {children}
-            </code>
-          );
-        },
-        h1: ({ children }) => (
-          <h1 className="mt-8 text-3xl font-bold tracking-tight">{children}</h1>
-        ),
-        h2: ({ children }) => (
-          <h2 className="mt-6 text-2xl font-semibold text-primary">
-            {children}
-          </h2>
-        ),
-        p: ({ children }) => (
-          <p className="mt-3 leading-7 text-muted-foreground">{children}</p>
-        ),
-        a: ({ href, children }) => (
-          <a
-            href={href}
-            className="text-accent hover:underline"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {children}
-          </a>
-        ),
-        blockquote: ({ children }) => (
-          <blockquote className="border-l-4 border-primary/50 pl-4 italic text-muted">
-            {children}
-          </blockquote>
-        ),
-      }}
-    >
-      {content}
-    </ReactMarkdown>
   );
 }

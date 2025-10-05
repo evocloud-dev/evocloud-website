@@ -61,7 +61,7 @@ export default function SimpleLink({
 
       {isOpen && (
         <div className="md:absolute md:top-[115%] md:left-1/2 md:-translate-x-1/2 bg-white z-50 font-normal divide-y rounded-lg shadow-sm shadow-primary/50 md:w-48">
-          <ul className="py-2 text-sm text-muted-foreground divide-y-2">
+          <ul className="py-2 text-sm text-muted-foreground divide-y">
             {links?.map((link) => (
               <li key={link.title} className="w-full">
                 <Link2
