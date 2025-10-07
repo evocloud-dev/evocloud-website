@@ -18,8 +18,8 @@ const tabs = [
   { id: "simplify-infrastructure", label: "Simplify Operation" },
   { id: "save-costs", label: "Cost-Efficiency" },
   { id: "automate-workflows", label: "Everything as Code" },
-  { id: "enable-ai", label: "Self-Service & Self-Healing" },
-  { id: "observe-and-govern", label: "Enforce Compliance" },
+  { id: "enable-ai", label: "Open Architecture" },
+  { id: "observe-and-govern", label: "Golden Paths" },
   { id: "modern-apps", label: "Support for Modern Workloads" },
 ];
 

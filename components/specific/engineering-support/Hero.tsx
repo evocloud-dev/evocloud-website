@@ -30,7 +30,7 @@ export default function Hero() {
             </div>
           </div>
           <Image
-            src="/images/evocloud-layer.svg"
+            src="/images/evocloud-engineering.svg"
             width={480}
             height={500}
             alt="EvoCloud-Eng-Pricing"
